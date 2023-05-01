@@ -1,0 +1,14 @@
+{
+    "@odata.type": "#DataService.1.0.0.DataService",
+    "@odata.id": "/redfish/v1/DataService",
+    "Records": 2018,
+    "Description": "24hr Data Service",
+    "Id": "DataService",
+    "Name": "Data Service",
+    "Enabled": true,
+    "Interval": 5,
+    "FileSize": 791354,
+    "24HrData": {
+        "@odata.id": "/redfish/v1/DataService/24hrData"
+    }
+}

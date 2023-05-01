@@ -1,0 +1,69 @@
+{
+    "RatedCurrentAmps": 10,
+    "IndicatorLED": "Lit",
+    "Name": "Outlet ITF Server 3 (Type B - 1WCRXT3), Branch Circuit E",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "@odata.type": "#Outlet.v1_0_0.Outlet",
+    "PolyPhaseCurrentAmps": {
+        "Line2": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentOUTLET19",
+            "Reading": 0.9779999852180481
+        }
+    },
+    "PhaseWiringType": "ThreePhase5Wire",
+    "Id": "ITF Server 3 (Type B - 1WCRXT3)",
+    "OutletType": "IEC_60320_C13",
+    "VoltageType": "AC",
+    "Actions": {
+        "#Outlet.PowerControl": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET19/Outlet.PowerControl"
+        },
+        "#Outlet.ResetMetrics": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET19/Outlet.ResetMetrics"
+        }
+    },
+    "PowerOffDelaySeconds": 0,
+    "PowerOnDelaySeconds": 0,
+    "NominalVoltage": "AC2",
+    "Links": {
+        "BranchCircuit": {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/E"
+        },
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET19",
+        "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+    },
+    "PowerState": "On",
+    "PowerEnabled": true,
+    "Voltage": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageOUTLET19",
+        "Reading": 237.96299743652344
+    },
+    "PolyPhaseVoltage": {
+        "Line2ToNeutral": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageOUTLET19",
+            "Reading": 237.96299743652344
+        }
+    },
+    "CurrentAmps": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentOUTLET19",
+        "Reading": 0.9779999852180481
+    },
+    "PowerWatts": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PowerOUTLET19",
+        "Reading": 216.97300720214844,
+        "PowerFactor": 0.9323069453239441,
+        "ApparentVA": 232.7270050048828,
+        "ReactiveVAR": 0.0
+    },
+    "FrequencyHz": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/FrequencyOUTLET19",
+        "Reading": 50
+    },
+    "EnergykWh": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/EnergyOUTLET19",
+        "Reading": 48.64699935913086
+    }
+}

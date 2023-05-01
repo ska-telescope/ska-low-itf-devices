@@ -12,6 +12,10 @@ include .make/base.mk
 
 include .make/python.mk
 
+include .make/oci.mk
+
+include .make/helm.mk
+
 docs-pre-build:
 	poetry config virtualenvs.create false
 	poetry install --no-root --only docs

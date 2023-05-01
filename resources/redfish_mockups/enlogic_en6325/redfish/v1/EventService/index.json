@@ -1,0 +1,18 @@
+{
+    "Actions": {
+        "#EventService.SendTestEvent": {
+            "target": "/redfish/v1/EventService/Actions/EventService.SendTestEvent"
+        },
+        "EventTypes@Redfish.AllowableValues": "[\"StatusChange\n\" , \"ResourceUpdated\n\", \"ResourceAdded\n\",  \"ResourceRemoved\n\", \"Alert\n\"]"
+    },
+    "@odata.type": "#EventService.1.0.0.EventService",
+    "@odata.id": "/redfish/v1/EventService",
+    "Description": "Event Notification Service",
+    "Id": "EventService",
+    "Name": "Event Service",
+    "ServiceEnabled": 1,
+    "EventTypesForSubscriptions": "[\"StatusChange\n\" , \"ResourceUpdated\n\", \"ResourceAdded\n\",  \"ResourceRemoved\n\", \"Alert\n\"]",
+    "Subscriptions": {
+        "@odata.Id": "/redfish/v1/EventService/Subscriptions"
+    }
+}

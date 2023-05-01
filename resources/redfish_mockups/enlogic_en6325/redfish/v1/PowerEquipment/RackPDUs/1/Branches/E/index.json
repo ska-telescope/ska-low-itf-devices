@@ -1,0 +1,78 @@
+{
+    "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/E",
+    "Name": "Branch Circuit E",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "PolyPhasePowerWatts": {
+        "Line2ToNeutral": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PowerE",
+            "Reading": 511.4679870605469,
+            "PowerFactor": 0.9549999833106995,
+            "ApparentVA": 535.239990234375,
+            "ReactiveVAR": 158.44200134277344
+        }
+    },
+    "@odata.type": "#Circuit.v1_0_0.Circuit",
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright.",
+    "PolyPhaseCurrentAmps": {
+        "Line2": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentE",
+            "Reading": 2.249000072479248
+        },
+        "PowerWatts": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PowerE",
+            "Reading": 511.4679870605469,
+            "PowerFactor": 0.9549999833106995,
+            "ApparentVA": 535.239990234375,
+            "ReactiveVAR": 158.44200134277344
+        }
+    },
+    "PhaseWiringType": "ThreePhase5Wire",
+    "Id": "1",
+    "CurrentAmps": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentE",
+        "Reading": 2.249000072479248
+    },
+    "CircuitType": "Branch",
+    "RatedCurrentAmps": 16,
+    "NominalVoltage": "AC2",
+    "BreakerState": "Normal",
+    "PolyPhaseVoltage": {
+        "Line2ToNeutral": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageEL2N",
+            "Reading": 237.96299743652344
+        }
+    },
+    "FrequencyHz": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/FrequencyE",
+        "Reading": 50.0
+    },
+    "EnergykWh": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/EnergyE",
+        "Reading": 223.11300659179688
+    },
+    "Outlets": [
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET17"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET18"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET19"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET20"
+        }
+    ],
+    "Actions": {
+        "#Circuit.BreakerControl": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/E/Circuit.BreakerControl"
+        },
+        "#Outlet.ResetMetrics": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/E/Circuit.ResetMetrics"
+        }
+    }
+}

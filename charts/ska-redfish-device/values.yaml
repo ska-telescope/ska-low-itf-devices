@@ -1,0 +1,5 @@
+simulators:
+  - image:
+      image: ska-redfish-simulator-enlogic-en6325
+      registry: registry.gitlab.com/ska-telescope/aiv/ska-low-itf-devices
+      tag: 0.1.0

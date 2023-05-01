@@ -1,0 +1,81 @@
+{
+    "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets",
+    "@odata.type": "#OutletCollection.OutletCollection",
+    "Name": "Outlet Collection",
+    "Members@odata.count": 24,
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright.",
+    "Outlets": [
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET1"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET2"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET3"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET4"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET5"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET6"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET7"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET8"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET9"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET10"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET11"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET12"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET13"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET14"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET15"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET16"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET17"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET18"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET19"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET20"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET21"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET22"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET23"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET24"
+        }
+    ]
+}

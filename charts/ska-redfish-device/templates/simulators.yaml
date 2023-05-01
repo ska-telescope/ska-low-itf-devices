@@ -1,0 +1,38 @@
+{{- range $index, $sim := .Values.simulators }}
+{{ $name := .name | coalesce (cat "redfish-simulator-" $index "-" ($sim.image.image | trimPrefix "ska-redfish-simulator")) }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $name }}-svc
+  labels:
+    app: {{ $name }}
+spec:
+  ports:
+  - port: 8000
+    name: http
+  clusterIP: None
+  selector:
+    app: {{ $name }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ $name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ $name }}
+  serviceName: {{ $name }}
+  template:
+    metadata:
+      labels:
+        app: {{ $name }}
+    spec:
+      containers:
+      - name: simulator
+        image: {{ $sim.image.registry }}/{{ $sim.image.image }}:{{ $sim.image.tag }}
+        imagePullPolicy: {{ $sim.image.imagePullPolicy | default "IfNotPresent" }}
+        ports:
+        - containerPort: 8000
+          name: http
+{{- end }}

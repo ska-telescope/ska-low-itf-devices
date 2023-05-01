@@ -1,0 +1,34 @@
+{
+    "Id": "RootService",
+    "AccountService": {
+        "@odata.id": "/redfish/v1/AccountService"
+    },
+    "JsonSchemas": {
+        "@odata.id": "/redfish/v1/Schemas"
+    },
+    "@odata.type": "ServiceRoot.v1_6_0.ServiceRoot",
+    "Name": "Redfish Root Service",
+    "@odata.id": "/redfish/v1",
+    "Manager": {
+        "@odata.id": "/redfish/v1/Managers"
+    },
+    "PowerDistribution": {
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs"
+    },
+    "SessionService": {
+        "@odata.id": "/redfish/v1/SessionService"
+    },
+    "links": {
+        "Session": {
+            "@odata.id": "/redfish/v1/SessionService/Sessions"
+        }
+    },
+    "EventService": {
+        "@odata.id": "/redfish/v1/EventService"
+    },
+    "DataService": {
+        "@odata.id": "/redfish/v1/DataService"
+    },
+    "RedfishVersion": "1.6.0",
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

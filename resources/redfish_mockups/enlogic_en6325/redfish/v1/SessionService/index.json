@@ -1,0 +1,17 @@
+{
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "@odata.id": "/redfish/v1/SessionService",
+    "@odata.type": "#SessionService.1.1.6.SessionService",
+    "Description": "Session Service",
+    "Id": "Session Service",
+    "Name": "Session Service",
+    "SessionTimeout": 10,
+    "ServiceEnabled": true,
+    "Sessions": {
+        "@odata.id": "/redfish/v1/SessionService/Sessions"
+    },
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

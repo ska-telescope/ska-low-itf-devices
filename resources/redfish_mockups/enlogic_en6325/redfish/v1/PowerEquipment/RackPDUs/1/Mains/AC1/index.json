@@ -1,0 +1,93 @@
+{
+    "Name": "Mains AC Input",
+    "Status": {
+        "Health": "OK"
+    },
+    "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Mains/AC1",
+    "Actions": {
+        "#Outlet.ResetMetrics": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Mains/AC1/Circuit.ResetMetrics"
+        }
+    },
+    "PolyPhasePowerWatts": [
+        {
+            "Line1ToNeutral": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PowerMains1-4",
+                "Reading": 1127,
+                "PowerFactor": 0.9639999866485596,
+                "ApparentVA": 1169,
+                "ReactiveVAR": 310
+            }
+        },
+        {
+            "Line2ToNeutral": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PowerMains1-5",
+                "Reading": 978,
+                "PowerFactor": 0.9559999704360962,
+                "ApparentVA": 1022,
+                "ReactiveVAR": 296
+            }
+        },
+        {
+            "Line3ToNeutral": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PowerMains1-6",
+                "Reading": 894,
+                "PowerFactor": 0.9480000138282776,
+                "ApparentVA": 943,
+                "ReactiveVAR": 300
+            }
+        }
+    ],
+    "@odata.type": "#Circuit.v1_0_0.Circuit",
+    "PolyPhaseCurrentAmps": [
+        {
+            "Line1": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentMains1-1",
+                "Reading": 4.881999969482422
+            }
+        },
+        {
+            "Line2": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentMains1-2",
+                "Reading": 4.294000148773193
+            }
+        },
+        {
+            "Line3": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentMains1-3",
+                "Reading": 3.937999963760376
+            }
+        }
+    ],
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright.",
+    "PhaseWiringType": "ThreePhase5Wire",
+    "Id": "AC1",
+    "CircuitType": "Mains",
+    "RatedCurrentAmps": 32,
+    "NominalVoltage": "AC2",
+    "BreakerState": "Normal",
+    "FrequencyHz": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/FreqMains",
+        "Reading": 50
+    },
+    "PolyPhaseVoltage": [
+        {
+            "Line1ToNeutral": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageMains1-4",
+                "Reading": 239
+            }
+        },
+        {
+            "Line2ToNeutral": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageMains1-5",
+                "Reading": 238
+            }
+        },
+        {
+            "Line3ToNeutral": {
+                "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageMains1-6",
+                "Reading": 239
+            }
+        }
+    ]
+}

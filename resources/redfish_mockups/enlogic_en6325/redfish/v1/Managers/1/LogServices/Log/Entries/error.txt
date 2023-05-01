@@ -1,0 +1,645 @@
+HTTP 200
+Server: Enlogic/1.4.0
+Connection: keep-alive
+Age: 264545
+Cache-Control: public, max-age=31536000
+Content-type: application/octet-stream
+Date: Mon, 09 Mar 2015 02:39:56 GMT
+Expires: Fri, 11 Mar 2016 04:09:01 GMT
+Last-Modified: Fri, 19 Jul 2013 02:45:56 GMT
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+
+07/03/2010      20:26:52        User Activity                   User admin of PDU 1  from host 10.30.0.215 time out
+07/03/2010      20:16:27        User Activity                   User admin of PDU 1  from host 10.30.0.215 logged in
+07/03/2010      20:15:57        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+07/03/2010      20:15:54        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+07/03/2010      20:15:54        External Sensor Measurement     External sensor T of PDU 1  communication OK
+07/03/2010      20:15:42        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+07/03/2010      20:14:58        System                          Network card of PDU 1  reset performed by user  from host 10.30.0.215
+07/03/2010      20:14:58        System                          Certificate of pdu 1  from host 10.30.0.215 uploaded successfully
+07/03/2010      20:13:02        User Activity                   User admin of PDU 1  from host 10.30.0.215 logged in
+07/03/2010      20:05:41        User Activity                   User admin of PDU 1  from host 10.30.0.215 time out
+07/03/2010      19:55:12        User Activity                   User admin of PDU 1  from host 10.30.0.215 logged in
+07/03/2010      19:54:54        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+07/03/2010      19:54:54        External Sensor Measurement     External sensor T of PDU 1  communication OK
+07/03/2010      19:54:52        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+07/03/2010      19:54:39        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+07/03/2010      19:54:09        System                          Network card of PDU 1  reset performed by user  from host 10.30.0.215
+07/03/2010      19:54:09        System                          Certificate of pdu 1  from host 10.30.0.215 uploaded successfully
+07/03/2010      19:52:32        User Activity                   User admin of PDU 1  from host 10.30.0.215 logged in
+07/03/2010      18:57:02        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+07/03/2010      17:15:15        User Activity                   Authentication of PDU 1  failed for user root from host 10.30.0.215
+07/03/2010      04:34:09        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+06/03/2010      19:51:28        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+06/03/2010      04:24:00        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+05/03/2010      20:03:55        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+05/03/2010      05:27:19        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+04/03/2010      19:53:36        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+04/03/2010      02:12:20        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+03/03/2010      20:13:25        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+03/03/2010      04:25:15        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+02/03/2010      19:25:14        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+02/03/2010      04:15:49        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+01/03/2010      21:17:11        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+01/03/2010      04:56:03        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+28/02/2010      22:06:24        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+28/02/2010      22:02:58        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+28/02/2010      21:58:31        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+28/02/2010      19:08:46        External Sensor Measurement     External sensor T of PDU 1  communication OK
+28/02/2010      19:08:40        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+28/02/2010      19:08:40        Power Share                     28/02/2010      19:07:56        System                          Network card of PDU 1  reset performed by user  from host 10.30.10.128
+28/02/2010      19:07:38        User Activity                   User admin of PDU 1  from host 10.30.10.128 logged in
+28/02/2010      17:48:51        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+28/02/2010      17:48:50        Input Phase Measurement         Voltage on Input Phase 2 of PDU 1  deasserted below lower critical
+28/02/2010      17:48:49        External Sensor Measurement     External sensor T of PDU 1  communication OK
+28/02/2010      17:48:42        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+28/02/2010      17:48:41        Input Phase Measurement         Voltage on Input Phase 2 of PDU 1  asserted below lower critical
+28/02/2010      17:48:12        System                          Network card of PDU 1  reset performed by user  from host 10.30.10.128
+28/02/2010      17:39:06        User Activity                   User admin of PDU 1  from host 10.30.10.128 logged in
+28/02/2010      03:48:24        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+27/02/2010      20:31:10        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+27/02/2010      03:17:26        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+26/02/2010      19:45:13        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+26/02/2010      05:06:12        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+26/02/2010      01:11:46        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/02/2010      01:11:41        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+25/02/2010      19:18:40        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+25/02/2010      03:04:20        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+24/02/2010      19:45:25        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+24/02/2010      03:22:16        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+23/02/2010      19:53:40        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+22/02/2010      00:34:11        User Activity                   User admin of PDU 1  from host 10.20.0.140 logged in
+22/02/2010      00:33:36        External Sensor Measurement     External sensor T of PDU 1  communication OK
+22/02/2010      00:33:31        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+22/02/2010      00:33:22        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+22/02/2010      00:32:39        System                          Network card of PDU 1  reset performed by user  from host 10.20.0.140
+21/02/2010      23:53:33        User Activity                   User admin of PDU 1  from host 10.20.0.140 logged in
+21/02/2010      23:15:28        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+21/02/2010      23:15:27        External Sensor Measurement     External sensor T of PDU 1  communication OK
+21/02/2010      23:15:23        Input Phase Measurement         Voltage on Input Phase 2 of PDU 1  deasserted below lower critical
+21/02/2010      23:15:16        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+21/02/2010      23:15:14        Input Phase Measurement         Voltage on Input Phase 2 of PDU 1  asserted below lower critical
+21/02/2010      23:14:32        System                          Network card of PDU 1  reset performed by user  from host 192.168.0.2
+21/02/2010      23:13:13        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+21/02/2010      23:13:11        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+21/02/2010      23:13:05        External Sensor Measurement     External sensor T of PDU 1  communication OK
+21/02/2010      23:12:54        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+21/02/2010      23:12:11        System                          Network card of PDU 1  reset performed by user  from host 192.168.0.2
+21/02/2010      23:09:48        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+21/02/2010      22:47:36        Outlet Power Control            ImmediateOn on Outlet 22, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:46:48        Outlet Power Control            ImmediateOn on Outlet 21, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:46:06        Outlet Power Control            ImmediateOn on Outlet 19, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:45:55        Outlet Power Control            ImmediateOn on Outlet 20, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:44:20        Outlet Power Control            ImmediateOn on Outlet 14, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:44:15        Outlet Power Control            ImmediateOn on Outlet 13, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:44:04        Outlet Power Control            ImmediateOn on Outlet 12, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:43:29        Outlet Power Control            ImmediateOn on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:43:25        Outlet Power Control            ImmediateOn on Outlet 5, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:42:52        Outlet Power Control            ImmediateOn on Outlet 4, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:42:46        Outlet Power Control            ImmediateOn on Outlet 3, of PDU 1  has been applied by user admin from host 192.168.0.2
+21/02/2010      22:41:58        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+21/02/2010      22:40:52        User Activity                   Authentication of PDU 1  failed for user admin from host 192.168.0.2
+21/02/2010      16:40:43        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+21/02/2010      16:40:42        External Sensor Measurement     External sensor T of PDU 1  communication OK
+21/02/2010      16:40:42        Input Phase Measurement         Voltage on Input Phase 1 of PDU 1  deasserted below lower critical
+21/02/2010      16:40:30        Input Phase Measurement         Voltage on Input Phase 1 of PDU 1  asserted below lower critical
+21/02/2010      12:25:37        External Sensor Measurement     External sensor RH of PDU 1  asserted below lower warning
+21/02/2010      12:03:21        External Sensor Measurement     External sensor T of PDU 1  asserted above upper critical
+21/02/2010      12:03:21        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+21/02/2010      11:22:08        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+21/02/2010      02:57:47        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+21/02/2010      01:05:54        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+20/02/2010      18:38:04        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+20/02/2010      18:21:17        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+20/02/2010      17:55:31        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+20/02/2010      01:53:09        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+19/02/2010      17:12:26        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+19/02/2010      02:18:36        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+18/02/2010      18:55:37        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+18/02/2010      15:21:58        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+18/02/2010      13:18:18        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+18/02/2010      00:55:48        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/02/2010      18:12:56        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/02/2010      17:53:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/02/2010      17:28:34        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/02/2010      00:00:14        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+16/02/2010      23:55:17        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+16/02/2010      22:19:26        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+16/02/2010      18:13:35        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+16/02/2010      17:50:24        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+16/02/2010      17:40:45        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      23:47:03        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      23:27:52        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      23:11:15        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      22:51:15        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      22:33:03        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      22:03:35        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      21:44:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      20:55:01        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      20:46:38        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      20:08:38        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      19:51:44        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      19:15:45        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      19:05:46        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      18:35:08        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      18:10:38        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      17:53:39        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      01:31:07        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/02/2010      00:59:04        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/02/2010      00:52:05        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+14/02/2010      17:32:27        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+14/02/2010      11:28:04        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+14/02/2010      11:15:36        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+14/02/2010      07:27:40        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+14/02/2010      07:03:04        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+14/02/2010      04:09:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+14/02/2010      03:52:24        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+14/02/2010      03:36:24        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+13/02/2010      16:19:48        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+13/02/2010      05:27:14        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+13/02/2010      05:17:45        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+13/02/2010      04:21:22        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+13/02/2010      04:18:44        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+13/02/2010      03:26:26        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/02/2010      17:04:37        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/02/2010      16:53:04        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/02/2010      16:36:27        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/02/2010      10:40:10        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/02/2010      10:35:54        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/02/2010      04:51:46        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+11/02/2010      14:14:34        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+11/02/2010      14:05:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+11/02/2010      13:56:05        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+11/02/2010      13:24:29        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+11/02/2010      13:22:20        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+11/02/2010      08:36:29        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+11/02/2010      08:25:27        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+11/02/2010      02:18:00        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+10/02/2010      16:06:57        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+10/02/2010      11:16:36        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+10/02/2010      11:08:23        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+10/02/2010      07:13:41        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+10/02/2010      06:58:23        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+10/02/2010      03:44:56        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+10/02/2010      03:32:33        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+10/02/2010      03:00:20        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+09/02/2010      17:01:52        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+09/02/2010      12:13:27        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+09/02/2010      09:56:51        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+09/02/2010      03:10:05        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/02/2010      16:42:58        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/02/2010      16:20:45        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/02/2010      15:57:56        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/02/2010      04:04:18        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/02/2010      15:16:37        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/02/2010      13:10:30        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/02/2010      12:13:43        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/02/2010      09:27:44        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+05/02/2010      14:33:11        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+05/02/2010      13:42:31        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+05/02/2010      10:30:23        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+05/02/2010      10:07:15        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+05/02/2010      09:20:43        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+05/02/2010      09:18:02        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+04/02/2010      13:14:46        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+04/02/2010      05:28:38        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+03/02/2010      10:57:48        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+03/02/2010      10:06:41        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+03/02/2010      10:02:51        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+03/02/2010      09:43:53        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+03/02/2010      09:28:13        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+03/02/2010      09:16:30        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+02/02/2010      09:44:55        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+02/02/2010      04:11:05        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+02/02/2010      03:59:06        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+02/02/2010      03:54:49        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+01/02/2010      08:54:56        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+01/02/2010      08:45:10        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+01/02/2010      08:24:23        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+01/02/2010      01:55:35        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+31/01/2010      10:41:14        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+31/01/2010      03:21:21        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+30/01/2010      18:48:03        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+30/01/2010      11:10:28        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+30/01/2010      11:09:13        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+30/01/2010      01:01:47        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+30/01/2010      00:44:10        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+30/01/2010      00:12:15        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      23:38:49        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      23:28:37        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      22:06:30        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      22:05:33        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      22:04:59        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      21:52:57        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      19:59:39        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      19:52:40        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      19:24:53        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      19:13:51        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      18:49:57        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      18:38:26        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      18:11:15        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      17:52:59        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      17:33:18        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      02:10:25        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      01:53:04        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      01:25:49        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+29/01/2010      00:43:30        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+29/01/2010      00:35:01        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+28/01/2010      16:43:48        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+28/01/2010      02:37:08        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+28/01/2010      02:21:18        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+28/01/2010      01:55:56        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+27/01/2010      19:15:19        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+27/01/2010      19:03:38        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+27/01/2010      18:39:47        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+27/01/2010      18:19:55        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+27/01/2010      18:01:38        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+27/01/2010      17:28:59        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+27/01/2010      17:27:58        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+27/01/2010      01:25:31        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+27/01/2010      01:10:26        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+27/01/2010      00:43:17        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+27/01/2010      00:25:51        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+27/01/2010      00:09:20        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      23:48:38        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      23:32:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      23:02:40        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      22:49:21        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      22:15:48        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      22:04:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      21:25:35        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      21:12:21        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      19:45:08        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      19:40:07        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      19:05:42        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      18:51:29        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      18:23:40        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      17:59:56        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      17:56:10        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      01:32:36        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      00:57:40        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+26/01/2010      00:34:21        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+26/01/2010      00:12:08        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+25/01/2010      23:57:42        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+25/01/2010      23:35:45        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+25/01/2010      23:19:05        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+25/01/2010      22:58:36        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+25/01/2010      22:47:02        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+25/01/2010      22:05:58        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+25/01/2010      21:59:14        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+25/01/2010      18:03:58        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+25/01/2010      01:02:23        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+24/01/2010      17:19:21        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+24/01/2010      15:06:43        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+24/01/2010      11:34:53        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+24/01/2010      10:56:07        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+24/01/2010      10:54:30        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+24/01/2010      03:38:54        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+23/01/2010      17:46:25        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+23/01/2010      02:17:56        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+22/01/2010      16:16:15        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+22/01/2010      06:06:05        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+22/01/2010      05:58:14        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+22/01/2010      02:01:34        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+21/01/2010      21:08:20        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+21/01/2010      21:00:37        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+21/01/2010      20:28:56        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+21/01/2010      20:17:14        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+21/01/2010      19:49:19        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+21/01/2010      19:34:24        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+21/01/2010      19:10:24        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+21/01/2010      18:50:37        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+21/01/2010      18:29:13        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+21/01/2010      18:07:03        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+21/01/2010      17:47:59        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+21/01/2010      02:27:27        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+21/01/2010      02:11:42        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+21/01/2010      01:44:31        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+20/01/2010      17:09:38        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+20/01/2010      01:09:55        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+19/01/2010      23:46:21        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+19/01/2010      23:32:48        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+19/01/2010      16:41:20        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+19/01/2010      01:51:23        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+18/01/2010      18:07:54        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      23:15:57        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      22:56:53        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      17:04:12        Outlet Power Control            ImmediateOn on Outlet 23, of PDU 1  has been applied by user admin from host 192.168.0.2
+17/01/2010      16:59:55        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+17/01/2010      16:59:50        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+17/01/2010      16:59:46        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+17/01/2010      14:03:29        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      14:03:29        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+17/01/2010      13:53:16        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+17/01/2010      13:53:15        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      13:24:46        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      13:24:45        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+17/01/2010      13:15:18        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+17/01/2010      13:15:17        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      12:46:27        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      12:46:27        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+17/01/2010      12:37:48        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+17/01/2010      12:37:48        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      12:08:37        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      12:08:36        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+17/01/2010      12:01:43        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+17/01/2010      12:01:42        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      11:28:10        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      11:28:10        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+17/01/2010      11:22:56        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+17/01/2010      11:22:55        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      10:49:38        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      10:49:38        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+17/01/2010      10:45:02        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+17/01/2010      10:45:01        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      10:08:16        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      10:08:16        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+17/01/2010      10:04:06        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+17/01/2010      10:04:06        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      03:26:37        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      03:10:19        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      03:09:04        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      03:07:50        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+17/01/2010      03:04:14        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+17/01/2010      01:58:13        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+16/01/2010      18:19:34        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+16/01/2010      17:10:18        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+16/01/2010      03:44:43        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+16/01/2010      03:41:02        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+16/01/2010      02:41:14        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+16/01/2010      01:58:36        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+16/01/2010      01:51:00        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged out
+16/01/2010      01:46:54        Outlet Power Control            ImmediateOn on Outlet 18, of PDU 1  has been applied by user admin from host 192.168.0.2
+16/01/2010      01:46:36        Outlet Power Control            ImmediateOn on Outlet 15, of PDU 1  has been applied by user admin from host 192.168.0.2
+16/01/2010      01:45:37        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+16/01/2010      01:08:55        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+16/01/2010      01:08:48        External Sensor Measurement     External sensor T of PDU 1  communication OK
+15/01/2010      20:06:03        External Sensor Measurement     External sensor RH of PDU 1  communication lost
+15/01/2010      20:05:57        External Sensor Measurement     External sensor T of PDU 1  communication lost
+15/01/2010      18:13:36        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+15/01/2010      17:23:20        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/01/2010      10:03:58        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/01/2010      10:03:58        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+15/01/2010      10:01:44        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+15/01/2010      10:01:44        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/01/2010      09:27:16        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/01/2010      09:27:16        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+15/01/2010      09:20:27        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+15/01/2010      09:20:26        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/01/2010      08:38:00        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+15/01/2010      08:38:00        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+15/01/2010      08:32:52        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+15/01/2010      08:32:51        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+15/01/2010      00:45:21        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+14/01/2010      17:36:08        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+14/01/2010      17:36:00        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+14/01/2010      17:34:39        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+14/01/2010      17:34:33        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+14/01/2010      16:34:12        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+14/01/2010      00:59:08        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+13/01/2010      18:29:50        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+13/01/2010      00:26:16        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+13/01/2010      00:11:33        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      23:50:16        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      23:27:19        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      23:05:56        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      22:39:04        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      22:25:25        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      22:24:17        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      22:20:37        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      21:49:21        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      21:36:40        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      21:11:22        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      20:57:18        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      20:56:09        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      20:55:47        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      20:35:41        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      20:21:45        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      19:55:29        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      19:45:10        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      19:24:34        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      19:08:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      18:47:44        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      18:27:39        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      18:15:56        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      17:46:49        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      17:46:40        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      17:46:22        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      17:46:12        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      17:44:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      17:44:37        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      01:19:36        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      01:19:24        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      01:13:29        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      01:13:20        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      01:08:38        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      01:07:37        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      01:06:17        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      01:03:34        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      01:03:01        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      01:02:21        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      01:00:32        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      01:00:25        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:59:26        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:58:31        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:57:21        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:52:40        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:52:27        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:52:01        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:51:40        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:51:18        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:50:57        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:48:44        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:48:28        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:48:20        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:47:47        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:45:36        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:45:12        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:44:52        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:44:30        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:43:50        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:43:35        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+12/01/2010      00:41:44        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+12/01/2010      00:41:10        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+11/01/2010      09:01:59        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+11/01/2010      04:59:05        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+11/01/2010      02:03:26        External Sensor Measurement     External sensor T of PDU 1  deasserted above upper warning
+10/01/2010      19:06:42        External Sensor Measurement     External sensor T of PDU 1  asserted above upper warning
+10/01/2010      09:41:12        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+10/01/2010      03:42:22        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+09/01/2010      10:36:56        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+09/01/2010      10:23:46        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+09/01/2010      09:24:05        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+09/01/2010      01:53:58        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      15:49:51        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      15:33:36        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      15:29:45        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      13:48:10        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      13:48:10        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      13:44:40        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      13:44:40        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      13:26:15        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      13:26:15        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      13:22:12        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      13:22:12        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      13:03:09        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      13:03:09        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      13:01:04        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      13:01:04        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      12:39:50        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      12:39:50        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      12:34:23        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      12:34:22        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      12:08:18        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      12:08:17        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      12:02:45        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      12:02:44        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      11:35:20        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      11:35:19        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      11:29:40        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      11:29:39        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      10:57:35        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      10:57:35        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      10:51:46        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      10:51:46        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      10:12:56        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      10:12:56        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      10:05:27        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      10:05:26        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+08/01/2010      09:10:06        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+08/01/2010      09:10:05        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper critical
+08/01/2010      09:06:30        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper critical
+08/01/2010      09:06:30        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:53:24        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:37:33        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:37:19        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:36:50        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:36:27        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:23:48        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:23:33        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:23:06        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:22:43        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:22:19        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:18:37        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:18:26        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:13:49        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:13:32        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:12:08        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:11:48        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:11:20        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:11:04        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:10:33        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:10:18        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:09:48        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:09:29        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:08:55        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:08:45        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:08:13        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:07:54        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:07:23        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:07:09        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:06:33        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:06:07        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:05:48        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:05:22        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:04:59        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      22:03:39        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      22:03:18        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:34:33        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:34:11        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:33:53        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:33:22        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:33:00        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:32:35        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:32:09        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:31:49        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:31:32        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:29:17        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:28:53        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:27:41        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:27:27        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:26:57        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:24:58        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:24:31        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      21:24:05        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      21:23:41        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      20:59:43        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      20:59:27        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      20:59:05        External Sensor Measurement     External sensor RH of PDU 1  deasserted above upper warning
+07/01/2010      20:40:53        External Sensor Measurement     External sensor RH of PDU 1  asserted above upper warning
+07/01/2010      19:54:30        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged out
+07/01/2010      19:54:21        User Administration             Data log of PDU 1  cleared by user admin from host 192.168.0.2
+07/01/2010      19:38:40        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+07/01/2010      19:33:40        External Sensor Measurement     External sensor T of PDU 1  communication OK
+07/01/2010      19:33:36        External Sensor Measurement     External sensor RH of PDU 1  communication OK
+06/01/2010      21:39:57        User Activity                   User admin of PDU 1  from host 192.168.0.50 time out
+06/01/2010      21:27:49        Outlet Power Control            ImmediateOn on Outlet 22, of PDU 1  has been applied by user admin from host 192.168.0.50
+06/01/2010      21:26:48        User Activity                   User admin of PDU 1  from host 192.168.0.50 logged in
+03/01/2010      20:02:26        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged out
+03/01/2010      19:36:48        Outlet Power Control            ImmediateOff on Outlet 18, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:36:45        Outlet Power Control            ImmediateOff on Outlet 17, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:36:16        Outlet Power Control            ImmediateOff on Outlet 16, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:36:12        Outlet Power Control            ImmediateOff on Outlet 15, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:35:29        Outlet Power Control            ImmediateOff on Outlet 10, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:35:25        Outlet Power Control            ImmediateOff on Outlet 9, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:34:33        Outlet Power Control            ImmediateOff on Outlet 8, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:34:28        Outlet Power Control            ImmediateOff on Outlet 7, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:34:19        Outlet Power Control            ImmediateOn on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:33:42        Outlet Power Control            ImmediateOff on Outlet 2, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:33:30        Outlet Power Control            ImmediateOff on Outlet 1, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:30:47        Outlet Power Control            ImmediateOff on Outlet 24, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:30:37        Outlet Power Control            ImmediateOff on Outlet 23, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:30:28        Outlet Power Control            ImmediateOn on Outlet 21, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:30:12        Outlet Power Control            ImmediateOn on Outlet 20, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:30:02        Outlet Power Control            ImmediateOn on Outlet 19, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:29:41        Outlet Power Control            ImmediateOn on Outlet 14, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:29:28        Outlet Power Control            ImmediateOn on Outlet 13, of PDU 1  has been applied by user admin from host 192.168.0.2
+03/01/2010      19:28:50        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+01/01/2010      22:46:54        Outlet Power Control            ImmediateOff on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:46:49        Outlet Power Control            ImmediateOn on Outlet 5, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:46:29        Outlet Power Control            ImmediateOff on Outlet 5, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:42:22        Outlet Power Control            ImmediateOn on Outlet 12, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:42:12        Outlet Power Control            ImmediateOn on Outlet 11, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:41:37        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+01/01/2010      22:22:03        User Activity                   User admin of PDU 1  from host 192.168.0.2 time out
+01/01/2010      22:10:17        Outlet Power Control            ImmediateOn on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:09:38        Outlet Power Control            ImmediateOff on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:09:29        Outlet Power Control            ImmediateOff on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:08:41        Outlet Power Control            ImmediateOn on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      22:02:10        Outlet Power Control            ImmediateOn on Outlet 5, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:53:19        Outlet Power Control            ImmediateOff on Outlet 22, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:53:10        Outlet Power Control            ImmediateOff on Outlet 21, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:52:58        Outlet Power Control            ImmediateOff on Outlet 20, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:52:48        Outlet Power Control            ImmediateOff on Outlet 19, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:52:34        Outlet Power Control            ImmediateOff on Outlet 14, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:52:25        Outlet Power Control            ImmediateOff on Outlet 13, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:52:09        Outlet Power Control            ImmediateOff on Outlet 12, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:52:00        Outlet Power Control            ImmediateOff on Outlet 11, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:51:24        Outlet Power Control            ImmediateOff on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:51:22        Outlet Power Control            ImmediateOff on Outlet 6, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:51:13        Outlet Power Control            ImmediateOff on Outlet 5, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:43:23        Outlet Power Control            ImmediateOn on Outlet 4, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:36:33        Outlet Power Control            ImmediateOff on Outlet 4, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:31:09        Outlet Power Control            ImmediateOn on Outlet 3, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:30:19        Outlet Power Control            ImmediateOff on Outlet 3, of PDU 1  has been applied by user admin from host 192.168.0.2
+01/01/2010      21:28:53        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+01/01/2010      21:28:26        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+01/01/2010      21:27:43        System                          Network card of PDU 1  reset performed by user  from host 192.168.0.2
+01/01/2010      21:26:40        User Administration             Password of user admin of PDU 1  changed by user admin from host 192.168.0.2
+01/01/2010      21:25:35        User Activity                   User admin of PDU 1  from host 192.168.0.2 logged in
+01/01/2010      00:00:27        Input Phase Measurement         Voltage on Input Phase 1 of PDU 1  deasserted below lower critical
+01/01/2010      00:00:10        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+01/01/2010      00:00:10        Input Phase Measurement         Voltage on Input Phase 1 of PDU 1  asserted below lower critical
+01/01/2010      00:00:22        Input Phase Measurement         Voltage on Input Phase 2 of PDU 1  deasserted below lower critical
+01/01/2010      00:00:09        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+01/01/2010      00:00:07        Input Phase Measurement         Voltage on Input Phase 2 of PDU 1  asserted below lower critical
+23/11/2022      12:05:43        User Activity                   User admin of PDU 1  from host 172.16.99.65 logged out
+23/11/2022      12:05:42        User Activity                   User admin of PDU 1  from host 172.16.99.65 logged in
+23/11/2022      12:03:57        Input Phase Measurement         Frequency on Input Phase 2 of PDU 1  asserted below lower critical
+23/11/2022      12:03:49        Power Share                     Main power of PDU 1  cleared failure alarm,switched main power supply
+23/11/2022      12:03:47        Input Phase Measurement         Voltage on Input Phase 3 of PDU 1  asserted below lower critical
+23/11/2022      12:03:47        Input Phase Measurement         Voltage on Input Phase 2 of PDU 1  asserted below lower critical
+23/11/2022      12:03:47        Input Phase Measurement         Voltage on Input Phase 1 of PDU 1  asserted below lower critical
+23/11/2022      12:03:36        External Sensor Measurement     External sensor  of PDU 1  communication OK
+23/11/2022      12:03:36        External Sensor Measurement     External sensor RH of PDU 1  communication OK

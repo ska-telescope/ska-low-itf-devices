@@ -1,0 +1,41 @@
+{
+    "AssignedPrivileges": [
+        "Login",
+        "Change Data Logging Settings",
+        "Change Date/Time Settings",
+        "Change Event Settings",
+        "Change External Sensors Configuration",
+        "Change Local User Management",
+        "Change Network Configuration",
+        "Change Own Password",
+        "Change PDU Settings",
+        "Change SNMP Settings",
+        "Change Security Settings",
+        "Change USB Settings",
+        "Firmware Update",
+        "Network Card Reset",
+        "Switch Outlet",
+        "Operate Configuration File",
+        "Change Input Phase Setting",
+        "Change Circuit Breaker Setting",
+        "Change Network Service",
+        "Change SMTP Setting",
+        "Change Server Reachability",
+        "Disconnect Other User",
+        "Run Diagnostics",
+        "Clear Data/Event Log",
+        "Change LDAP Setting",
+        "Change Outlet Setting"
+    ],
+    "@odata.context": "/redfish/v1/$metadata#AccountService/Members/Roles/Members/$entity",
+    "@odata.type": "#Role.1.0.0.Role",
+    "@odata.id": "/redfish/v1/AccountService/Roles/manager",
+    "Description": "redfish user",
+    "Id": "manager",
+    "Name": "User Role",
+    "OemPrivileges": [
+        "OemClearLog",
+        "OemPowerControl"
+    ],
+    "IsPredefined": true
+}

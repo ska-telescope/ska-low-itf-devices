@@ -1,0 +1,25 @@
+{
+    "Name": "System Log Service",
+    "DateTime": "2010-03-07T22:06:07+00:00",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "@odata.id": "/redfish/v1/Managers/1/LogServices/Log",
+    "MaxNumberOfRecords": 500,
+    "Actions": {
+        "#LogService.ClearLog": {
+            "target": "/redfish/v1/Managers/1/LogServices/Log/Actions/LogService.Reset"
+        }
+    },
+    "@odata.type": "#LogService.v1_1_3.LogService",
+    "ServiceEnabled": true,
+    "Id": "Log",
+    "OverWritePolicy": "WrapsWhenFull",
+    "DateTimeLocalOffset": "+00:00",
+    "Entries": {
+        "@odata.id": "/redfish/v1/Managers/1/LogServices/Log/Entries"
+    },
+    "Oem": {},
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

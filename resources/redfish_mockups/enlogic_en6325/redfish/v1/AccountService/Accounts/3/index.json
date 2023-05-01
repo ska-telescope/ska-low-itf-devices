@@ -1,0 +1,19 @@
+{
+    "Locked": false,
+    "Password": "*",
+    "@odata.context": "/redfish/v1/$metadata#AccountService/Members/Accounts/Members/$entity",
+    "@odata.type": "#ManagerAccount.1.0.0.ManagerAccount",
+    "@odata.id": "/redfish/v1/AccountService/Accounts/3",
+    "Description": "User Account",
+    "Id": "3",
+    "Name": "User Account",
+    "Username": "manager",
+    "Enabled": true,
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright.",
+    "RoleId": "manager",
+    "Links": {
+        "Role": {
+            "@data.id": "/redfish/v1/AccountService/Roles/manager"
+        }
+    }
+}

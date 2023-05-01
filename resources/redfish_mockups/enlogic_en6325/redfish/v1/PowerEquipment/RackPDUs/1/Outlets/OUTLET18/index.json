@@ -1,0 +1,69 @@
+{
+    "RatedCurrentAmps": 16,
+    "IndicatorLED": "Lit",
+    "Name": "Outlet Dell S4048-ON Supply 2, Branch Circuit E",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "@odata.type": "#Outlet.v1_0_0.Outlet",
+    "PolyPhaseCurrentAmps": {
+        "Line2": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentOUTLET18",
+            "Reading": 0.24899999797344208
+        }
+    },
+    "PhaseWiringType": "ThreePhase5Wire",
+    "Id": "Dell S4048-ON Supply 2",
+    "OutletType": "IEC_60320_C19",
+    "VoltageType": "AC",
+    "Actions": {
+        "#Outlet.PowerControl": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET18/Outlet.PowerControl"
+        },
+        "#Outlet.ResetMetrics": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET18/Outlet.ResetMetrics"
+        }
+    },
+    "PowerOffDelaySeconds": 0,
+    "PowerOnDelaySeconds": 0,
+    "NominalVoltage": "AC2",
+    "Links": {
+        "BranchCircuit": {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/E"
+        },
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET18",
+        "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+    },
+    "PowerState": "On",
+    "PowerEnabled": true,
+    "Voltage": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageOUTLET18",
+        "Reading": 237.96299743652344
+    },
+    "PolyPhaseVoltage": {
+        "Line2ToNeutral": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageOUTLET18",
+            "Reading": 237.96299743652344
+        }
+    },
+    "CurrentAmps": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentOUTLET18",
+        "Reading": 0.24899999797344208
+    },
+    "PowerWatts": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PowerOUTLET18",
+        "Reading": 54.18899917602539,
+        "PowerFactor": 0.9145514369010925,
+        "ApparentVA": 59.25199890136719,
+        "ReactiveVAR": 0.0
+    },
+    "FrequencyHz": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/FrequencyOUTLET18",
+        "Reading": 50
+    },
+    "EnergykWh": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/EnergyOUTLET18",
+        "Reading": 29.100000381469727
+    }
+}

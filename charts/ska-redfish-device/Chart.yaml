@@ -1,0 +1,6 @@
+apiVersion: v2
+name: ska-redfish-device
+description: A Helm chart for Tango controls of Redfish based devices
+type: application
+version: 0.1.0
+appVersion: 0.1.0

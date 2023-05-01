@@ -1,0 +1,23 @@
+{
+    "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Metrics",
+    "Actions": {
+        "#PowerDistributionMetrics.ResetMetrics": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Metrics/PowerDistributionMetrics.ResetMetrics"
+        }
+    },
+    "@odata.type": "#PowerDistributionMetrics.v1_0_0.PowerDistributionMetrics",
+    "Id": "Metrics",
+    "Name": "Summary Metrics",
+    "PowerWatts": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PDUPower",
+        "Reading": 3012.875,
+        "PowerFactor": 0.9580000042915344,
+        "ApparentVA": 3144.159912109375,
+        "ReactiveVAR": 902.8980102539062
+    },
+    "EnergykWh": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PDUEnergy",
+        "Reading": 1022.3759765625
+    },
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

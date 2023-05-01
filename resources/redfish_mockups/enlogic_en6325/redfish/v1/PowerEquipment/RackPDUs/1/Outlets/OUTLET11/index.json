@@ -1,0 +1,69 @@
+{
+    "RatedCurrentAmps": 10,
+    "IndicatorLED": "Lit",
+    "Name": "Outlet IDRAC Switch (Cisco 3560) Supply 1, Branch Circuit C",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "@odata.type": "#Outlet.v1_0_0.Outlet",
+    "PolyPhaseCurrentAmps": {
+        "Line3": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentOUTLET11",
+            "Reading": 0.27900001406669617
+        }
+    },
+    "PhaseWiringType": "ThreePhase5Wire",
+    "Id": "IDRAC Switch (Cisco 3560) Supply 1",
+    "OutletType": "IEC_60320_C13",
+    "VoltageType": "AC",
+    "Actions": {
+        "#Outlet.PowerControl": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET11/Outlet.PowerControl"
+        },
+        "#Outlet.ResetMetrics": {
+            "target": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET11/Outlet.ResetMetrics"
+        }
+    },
+    "PowerOffDelaySeconds": 0,
+    "PowerOnDelaySeconds": 0,
+    "NominalVoltage": "AC2",
+    "Links": {
+        "BranchCircuit": {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/C"
+        },
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets/OUTLET11",
+        "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+    },
+    "PowerState": "On",
+    "PowerEnabled": true,
+    "Voltage": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageOUTLET11",
+        "Reading": 239.62100219726562
+    },
+    "PolyPhaseVoltage": {
+        "Line3ToNeutral": {
+            "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/VoltageOUTLET11",
+            "Reading": 239.62100219726562
+        }
+    },
+    "CurrentAmps": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/CurrentOUTLET11",
+        "Reading": 0.27900001406669617
+    },
+    "PowerWatts": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/PowerOUTLET11",
+        "Reading": 59.270999908447266,
+        "PowerFactor": 0.8865737318992615,
+        "ApparentVA": 66.85399627685547,
+        "ReactiveVAR": 0.0
+    },
+    "FrequencyHz": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/FrequencyOUTLET11",
+        "Reading": 50
+    },
+    "EnergykWh": {
+        "DataSourceUri": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors/EnergyOUTLET11",
+        "Reading": 37.29999923706055
+    }
+}

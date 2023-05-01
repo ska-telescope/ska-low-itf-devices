@@ -1,0 +1,13 @@
+{
+    "@odata.type": "#ManagerCollection.ManagerCollection",
+    "@odata.id": "/redfish/v1/Managers/",
+    "Oem": {},
+    "Members@odata.count": 1,
+    "Name": "Manager Collection",
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright.",
+    "Members": [
+        {
+            "@odata.id": "/redfish/v1/Managers/manager"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/",
+    "@odata.type": "#CircuitCollection.CircuitCollection",
+    "Name": "Branch Circuit Collection",
+    "Members@odata.count": 6,
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright.",
+    "Branch": [
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/A"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/B"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/C"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/D"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/E"
+        },
+        {
+            "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches/F"
+        }
+    ]
+}

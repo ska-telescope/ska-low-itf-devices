@@ -1,0 +1,9 @@
+Redfish service captured by the Redfish Mockup Creator, Version 1.1.9
+Created: 2023-03-31 14:38:33
+Service: http://10.135.253.201
+User: admin
+Description: 
+Total response time: 27.36782670021057
+Average response time: 0.4561304450035095
+Minimum response time: 0.09874463081359863, /redfish/v1/$metadata
+Maximum response time: 1.070558786392212, /redfish/v1/PowerEquipment/RackPDUs/1/Outlets

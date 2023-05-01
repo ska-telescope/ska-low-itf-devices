@@ -1,0 +1,47 @@
+{
+    "Name": "Manager",
+    "@odata.id": "/redfish/v1/Managers/manager",
+    "DateTime": "2010-01-01T00:00:00",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "SerialConsole": {
+        "ServiceEnabled": true,
+        "MaxConcurrentSessions": 1,
+        "ConnectTypesSupported": [
+            "Serial",
+            "SSH"
+        ]
+    },
+    "@odata.type": "#Manager.1.0.0.Manager",
+    "FirmwareVersion": "2.0.4.6",
+    "NetworkProtocol": {
+        "@odata.id": "/redfish/v1/Managers/1/NetworkService"
+    },
+    "Id": "manager",
+    "Description": "Manager View",
+    "DateTimeLocalOffset": "+00:00",
+    "CommandShell": {
+        "ServiceEnabled": true,
+        "MaxConcurrentSessions": 1,
+        "ConnectTypesSupported": [
+            "SSH"
+        ]
+    },
+    "PowerState": "On",
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright.",
+    "GraphicalConsole": {
+        "ServiceEnabled": true,
+        "MaxConcurrentSessions": 1,
+        "ConnectTypesSupported": "KVMIP"
+    },
+    "LogServices": {
+        "@odata.id": "/redfish/v1/Managers/1/LogServices"
+    },
+    "Actions": {
+        "#Manager.Reset": {
+            "target": "/redfish/v1/Managers/1/Actions/Manager.Reset/"
+        }
+    }
+}

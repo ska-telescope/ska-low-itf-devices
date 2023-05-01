@@ -1,0 +1,44 @@
+{
+    "Model": "346-415V, 32A, 22.0kVA, 50/60Hz",
+    "@odata.type": "#PowerDistribution.v1_0_0.PowerDistribution",
+    "Mains": {
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Mains"
+    },
+    "ProductionDate": "2021-10-20T00:01:01",
+    "UUID": "NULL",
+    "FirmwareVersion": "2.0.4.6",
+    "OutletGroups": {
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/OutletGroups"
+    },
+    "Outlets": {
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Outlets"
+    },
+    "Branches": {
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Branches"
+    },
+    "EquipmentType": "RackPDU",
+    "Id": 1,
+    "AssetTag": "NULL",
+    "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "Name": "",
+    "Sensors": {
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Sensors"
+    },
+    "SerialNumber": "WKKL0064",
+    "Version": "1.6.0",
+    "Manufacturer": "CIS",
+    "PartNumber": "EN6808",
+    "Location": {
+        "Placement": {
+            "Row": ""
+        }
+    },
+    "Metrics": {
+        "@odata.id": "/redfish/v1/PowerEquipment/RackPDUs/1/Metrics"
+    },
+    "@Redfish.Copyright": "Copyright 2014-2018 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

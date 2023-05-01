@@ -1,0 +1,14 @@
+{
+    "AssignedPrivileges": [
+        "Login",
+        "Change Data Logging Settings"
+    ],
+    "@odata.context": "/redfish/v1/$metadata#AccountService/Members/Roles/Members/$entity",
+    "@odata.type": "#Role.1.0.0.Role",
+    "@odata.id": "/redfish/v1/AccountService/Roles/user",
+    "Description": "user operation",
+    "Id": "user",
+    "Name": "User Role",
+    "OemPrivileges": [],
+    "IsPredefined": true
+}
