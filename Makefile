@@ -14,6 +14,9 @@ include .make/python.mk
 
 include .make/oci.mk
 
+# Build context should be the root for all images
+OCI_IMAGE_BUILD_CONTEXT ?= $(PWD)
+
 include .make/helm.mk
 
 docs-pre-build:
