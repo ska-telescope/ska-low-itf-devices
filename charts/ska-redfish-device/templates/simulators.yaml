@@ -1,5 +1,5 @@
 {{- range $index, $sim := .Values.simulators }}
-{{ $name := .name | coalesce (cat "redfish-simulator-" $index "-" ($sim.image.image | trimPrefix "ska-redfish-simulator")) }}
+{{ $name := .name | coalesce (printf "redfish-simulator-%02d-%s" $index ($sim.image.image | trimPrefix "ska-redfish-simulator-")) }}
 apiVersion: v1
 kind: Service
 metadata:

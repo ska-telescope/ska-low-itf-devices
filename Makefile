@@ -19,6 +19,8 @@ OCI_IMAGE_BUILD_CONTEXT = $(PWD)
 
 include .make/helm.mk
 
+include .make/k8s.mk
+
 docs-pre-build:
 	poetry config virtualenvs.create false
 	poetry install --no-root --only docs
