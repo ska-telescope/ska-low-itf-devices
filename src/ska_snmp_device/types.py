@@ -4,7 +4,7 @@ Functions to handle translation between PyTango- and PySNMP-compatible types.
 It should be possible to add support for new types by only modifying
 the functions in this module.
 """
-
+import typing
 from dataclasses import dataclass
 from enum import Enum, EnumMeta, IntEnum
 from functools import reduce
@@ -27,9 +27,32 @@ class BitEnum(IntEnum):
     """This exists to let us dispatch on Enum subclass elsewhere."""
 
 
+def strbool(value: Any) -> bool:
+    return bool(int(value))
+
+
 @dataclass(frozen=True)
 class SNMPAttrInfo(AttrInfo):
     identity: tuple[str | int, ...]
+
+
+def dtype_string_to_type(dtype: str) -> typing.Callable:
+    """
+    Takes a string as provided as an override to an attribute's type
+    via a YAML configuration file, and returns a corresponding Python
+    type or callable.
+    """
+
+    # TODO define the full set of valid string dtypes
+    str_dtypes = {
+        "float": float,
+        "double": float,
+        "int": int,
+        "enum": int,  # feels under-defined, could/should produce an Enum?
+        "bool": strbool,
+        "boolean": strbool,  # is "boolean" necessary?
+    }
+    return str_dtypes[dtype]
 
 
 def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
@@ -44,7 +67,7 @@ def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
             if int_val & (0b10000000 >> bit)
         ]
     if isinstance(value, OctetString):
-        return str(value)
+        return attr.dtype(value)
     return value
 
 
