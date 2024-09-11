@@ -15,7 +15,7 @@ from pyasn1.type.base import Asn1Type
 from pyasn1.type.constraint import ConstraintsUnion, ValueRangeConstraint
 from pyasn1.type.namedval import NamedValues
 from pyasn1.type.univ import Integer
-from pysnmp.proto.rfc1902 import Bits, OctetString
+from pysnmp.proto.rfc1902 import Bits, Integer32, OctetString
 from tango import AttrDataFormat, DevEnum, DevULong64
 
 from ska_low_itf_devices.attribute_polling_component_manager import AttrInfo
@@ -57,7 +57,7 @@ def dtype_string_to_type(dtype: str) -> Any:
         "float": float,
         "double": float,
         "int": int,
-        "enum": DevEnum,  # should be Enum but there's a bug in tango/utils.py
+        "enum": DevEnum,
         "bool": bool,
         "boolean": bool,  # it pays homage to tango.DevBoolean
     }
@@ -67,7 +67,7 @@ def dtype_string_to_type(dtype: str) -> Any:
 def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
     """Coerce a PySNMP value to a PyTango-compatible Python type."""
     if isinstance(value, Integer):
-        return int(value)
+        return value if attr.dtype == DevEnum else int(value)
     if isinstance(value, Bits):
         return [
             attr.dtype((byte * 8) + bit)
@@ -77,7 +77,7 @@ def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
         ]
     if attr.dtype == bool:
         return strbool(value)
-    if attr.dtype == DevEnum and attr.attr_args.get("enum_labels"):
+    if attr.dtype in [DevEnum, Integer32] and attr.attr_args.get("enum_labels"):
         return attr.attr_args["enum_labels"][int(value)]
     if isinstance(value, OctetString):
         return str(value)
@@ -166,7 +166,7 @@ def attr_args_from_snmp_type(snmp_type: Asn1Type) -> dict[str, Any]:
             # specify the smallest compatible Tango int type?
             if stop.bit_length() > 63:
                 attr_args["dtype"] = DevULong64
-                if stop == 2**64 - 1:
+                if (stop + 1).bit_length() == 65:
                     del attr_args["max_value"]
     return attr_args
 
