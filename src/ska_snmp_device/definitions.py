@@ -131,6 +131,8 @@ def _expand_attribute(attr: Any) -> Generator[Any, None, None]:
     function also performs some validation on the attribute definition.
     """
     suffix = attr["oid"][2:]
+    start_index = attr.pop("start_index", None)
+    placeholder_index = attr.pop("placeholder_index", 0)
     indexes = attr.pop("indexes", [])
     name = attr["name"]
 
@@ -151,14 +153,22 @@ def _expand_attribute(attr: Any) -> Generator[Any, None, None]:
                 f'OID for attribute "{name}" must have a suffix - use 0 for a scalar object'
             )
 
-    index_ranges = (range(a, b + 1) for a, b in indexes)
+    index_ranges = (
+        (range(v[0], v[1] + v[2], v[2])) if len(v) > 2 else (range(v[0], v[1] + 1))
+        for v in indexes
+    )
     for element in itertools.product(*([i] for i in suffix), *index_ranges):
         index_vars = element[len(suffix) :]  # black wants this space T_T
-        formatted_name = name.format(*index_vars)
+        index_vars_list = list(index_vars)
+        if start_index is not None:
+            index_vars_list[placeholder_index] = start_index
+            start_index += 1
+        formatted_name = name.format(*index_vars_list)
         if not formatted_name.isidentifier():
             raise ValueError(
                 f'Attribute name "{formatted_name}" is not a valid Python identifier'
             )
+
         yield {
             **attr,
             "name": formatted_name,

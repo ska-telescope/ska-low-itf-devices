@@ -78,7 +78,10 @@ def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
     if attr.dtype == bool:
         return strbool(value)
     if attr.dtype in [DevEnum, Integer32] and attr.attr_args.get("enum_labels"):
-        return attr.attr_args["enum_labels"][int(value)]
+        if value:
+            return attr.attr_args["enum_labels"][int(value)]
+        else:
+            raise ValueError(f"{attr.name} has null value. Cannot convert to enum")
     if isinstance(value, OctetString):
         return str(value)
     return value
