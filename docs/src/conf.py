@@ -69,17 +69,14 @@ html_context = {
 
 autodoc_mock_imports = ["ska_tango_base", "tango"]
 
+# -- Extension configuration -------------------------------------------------
 intersphinx_mapping = {
-    "https://docs.python.org/3.10/": None,
+    "python": ("https://docs.python.org/3.10/", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
+    "pytango": ("https://pytango.readthedocs.io/en/stable/", None),
     "ska-control-model": (
         "https://developer.skao.int/projects/ska-control-model/en/latest/",
         None,
     ),
-    "ska-tango-base": (
-        "https://developer.skatelescope.org/projects/ska-tango-base/en/latest/",
-        None,
-    ),
-    "tango": ("https://pytango.readthedocs.io/en/v9.3.6/", None),
 }
-
 nitpick_ignore = []
