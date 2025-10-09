@@ -93,6 +93,11 @@ exclude = "tests/"
 mypy_path = "src/:tests/"
 show_error_codes = true
 strict = true
+exclude = [
+    "src/mta_chiller_device/",
+]
+follow_imports = "silent"
+
 
 [[tool.mypy.overrides]]
 module = [
@@ -119,6 +124,15 @@ ignore-imports = "yes"
 
 [tool.pylint.master]
 ignore = "tests"
-disable = ["D107", "C0301", "W0511", "missing-module-docstring", "missing-class-docstring"]
+disable = [
+    "too-many-instance-attributes",
+    "too-many-arguments",
+    "too-many-public-methods",
+    "abstract-method",
+    "C0301",
+    "W0511",
+    "missing-module-docstring",
+    "missing-class-docstring",
+]
 
 [tool.coverage.run]

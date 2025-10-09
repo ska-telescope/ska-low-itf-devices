@@ -47,7 +47,7 @@ def manual_test_powercycle():
     print("PASSED: Please check that one chiller is switched ON")
 
 
-def test_attributes():
+def test_attributes() -> None:
     """Tests whether the MTA Chiller attributes are exposed correctly through the tango device"""
     print("test_attributes")
 

@@ -15,9 +15,9 @@ from . import utils
 class XWebEvoClient:
     """A Python client for communicating with the XWeb Evo chiller user interface."""
 
-    def __init__(self, ip: str, username: str, hashed_password: str):
-        self.ip: str = ip
-        self.base_url: str = f"http://{self.ip}"
+    def __init__(self, ip_address: str, username: str, hashed_password: str):
+        self.ip_address: str = ip_address
+        self.base_url: str = f"http://{self.ip_address}"
         self.username: str = username
         self.hashed_password: str = hashed_password
         self._sses: str | None = None
@@ -81,7 +81,7 @@ class XWebEvoClient:
     def open_socket(self):
         """Open the websocket connection with the XWeb Evo system."""
 
-        self._socket = connect(f"ws://{self.ip}/evocli", origin=self.base_url)
+        self._socket = connect(f"ws://{self.ip_address}/evocli", origin=self.base_url)
 
     def close_socket(self):
         """Close the websocket connection with the XWeb Evo system."""

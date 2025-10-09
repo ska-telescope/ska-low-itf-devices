@@ -201,8 +201,8 @@ class MTAChillerManager:
                     ValueError,
                     WebSocketException,
                     AssertionError,
-                ) as e:
-                    print(f"Unable to connect: {e}")
+                ) as ex:
+                    print(f"Unable to connect: {ex}")
                     reconnect_event.set()
 
             else:
@@ -215,8 +215,8 @@ class MTAChillerManager:
                     alarms = self._client.get_alarms()
                     self._process_new_alarms(alarms)
 
-                except (RequestException, ValueError) as e:
-                    print(f"Encountered an exception: {e}")
+                except (RequestException, ValueError) as ex:
+                    print(f"Encountered an exception: {ex}")
                     self._update_communication_state("NOT_ESTABLISHED")
                     reconnect_event.set()
 
@@ -296,9 +296,9 @@ class MTAChillerManager:
         # issue the command
         try:
             self._client.send_command(device_id, command_id)
-        except (RequestException, ValueError) as e:
+        except (RequestException, ValueError) as ex:
             print(
-                f"Failed to send command: device {device_id}, command {command_id}, {e}"
+                f"Failed to send command: device {device_id}, command {command_id}, {ex}"
             )
 
     def _int_to_bool(self, val: str):
