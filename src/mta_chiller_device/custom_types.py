@@ -1,5 +1,5 @@
 from collections.abc import Callable
-from typing import Optional, TypedDict, TypeAlias
+from typing import Optional, TypeAlias, TypedDict
 
 
 class AttributeDetail(TypedDict):

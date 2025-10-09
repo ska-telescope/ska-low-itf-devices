@@ -2,8 +2,9 @@
 
 import os
 from time import time
+
 from tango import AttrQuality, DevState
-from tango.server import Device, device_property, attribute, command
+from tango.server import Device, attribute, command, device_property
 
 from mta_chiller_device.custom_types import ClientConfig
 from mta_chiller_device.device_manager import MTAChillerManager

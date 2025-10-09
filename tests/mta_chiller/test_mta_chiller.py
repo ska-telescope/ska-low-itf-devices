@@ -1,9 +1,7 @@
-# pylint: disable=locally-disabled, missing-class-docstring, missing-module-docstring, missing-function-docstring
-
 import os
 from time import sleep
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 from tango import DevState
 from tango.test_context import DeviceTestContext
 
@@ -17,6 +15,7 @@ properties = {"host": ip, "device_name": "MTA Chiller 2"}
 
 
 def test_init():
+    """Tests whether the MTA chiller device initialises correctly"""
     print("test_init")
 
     with DeviceTestContext(MTAChiller, properties=properties) as proxy:
@@ -28,6 +27,7 @@ def test_init():
 
 
 def manual_test_powercycle():
+    """Tests whether the powercycle functionality works correctly. Do not run this test automatically."""
     print("test_powercycle")
 
     with DeviceTestContext(MTAChiller, properties=properties) as proxy:
@@ -48,6 +48,7 @@ def manual_test_powercycle():
 
 
 def test_attributes():
+    """Tests whether the MTA Chiller attributes are exposed correctly through the tango device"""
     print("test_attributes")
 
     with DeviceTestContext(MTAChiller, properties=properties) as proxy:
@@ -90,6 +91,7 @@ def test_attributes():
 
 
 def manual_test_reconnect():
+    """Tests that the chiller device successfully reconnects after a network interruption"""
     print("test_reconnect")
 
     with DeviceTestContext(MTAChiller, properties=properties) as proxy:
