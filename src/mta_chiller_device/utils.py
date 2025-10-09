@@ -1,4 +1,4 @@
-"""This module contains util functions for transforming HTTP responses"""
+"""This module contains util functions for transforming HTTP responses."""
 
 import json
 from urllib.parse import unquote
@@ -16,7 +16,7 @@ from mta_chiller_device.custom_types import (
 
 
 def transform_to_credentials(response) -> tuple[str, str]:
-    """Extracts the session key and command key from the HTTP response"""
+    """Extract the session key and command key from the HTTP response."""
 
     sses: str = _.get(response, "sses", None)
 
@@ -38,7 +38,7 @@ def transform_to_credentials(response) -> tuple[str, str]:
 
 
 def transform_to_config(response) -> tuple[list[ControlGroup], list[ClientDevice]]:
-    """Extracts the control groups and devices from the HTTP response"""
+    """Extract the control groups and devices from the HTTP response."""
 
     # Locate the control groups
     control_groups: list[ControlGroup] = (
@@ -82,7 +82,7 @@ def transform_to_config(response) -> tuple[list[ControlGroup], list[ClientDevice
 
 
 def transform_to_commands(device) -> list[ClientCommand]:
-    """Extracts all the available commands for a device from the HTTP response"""
+    """Extract all the available commands for a device from the HTTP response."""
 
     commands: list[ClientCommand] = (
         _.chain(device)
@@ -103,7 +103,7 @@ def transform_to_commands(device) -> list[ClientCommand]:
 
 
 def transform_to_attributes(device) -> list[ClientAttribute]:
-    """Extracts all the available attributes for a device from the HTTP response"""
+    """Extract all the available attributes for a device from the HTTP response."""
 
     attributes: list[ClientAttribute] = (
         _.chain(device)
@@ -128,7 +128,7 @@ def transform_to_attributes(device) -> list[ClientAttribute]:
 def transform_socket_message(
     message: str, devices: list[ClientDevice]
 ) -> tuple[list[Datapoint], list[Alarm]]:
-    """Transforms a recieved socket message into attribute values and alarms"""
+    """Transform a recieved socket message into attribute values and alarms."""
 
     data = json.loads(message)
 
@@ -201,7 +201,7 @@ def transform_socket_message(
 
 
 def transform_to_alarms(response: str, devices: list[ClientDevice]) -> list[Alarm]:
-    """Extracts all current alarms from the HTTP resonse"""
+    """Extract all current alarms from the HTTP resonse."""
 
     alarms: list[Alarm] = (
         _.chain(response)

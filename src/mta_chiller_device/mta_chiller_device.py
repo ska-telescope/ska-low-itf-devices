@@ -1,4 +1,4 @@
-"""This module contains a PyTango device for monitoring and controlling the MTA Chillers"""
+"""This module contains a PyTango device for monitoring and controlling the MTA Chillers."""
 
 import os
 from time import time
@@ -11,7 +11,7 @@ from mta_chiller_device.device_manager import MTAChillerManager
 
 
 class MTAChiller(Device):
-    """A PyTango device for the MTA Chillers"""
+    """A PyTango device for the MTA Chillers."""
 
     # Define the device properties
     model = device_property(dtype=str, default_value="XIC208CX")
@@ -32,7 +32,7 @@ class MTAChiller(Device):
         self._fault: bool = False
 
     def init_device(self):
-        """Initialise device"""
+        """Initialise device."""
         super().init_device()
         self.set_state(DevState.UNKNOWN)
 
@@ -73,6 +73,7 @@ class MTAChiller(Device):
         self._chiller_manager.start_communicating()
 
     def delete_device(self):
+        """Stop communicating before deleting Tango device."""
         self._chiller_manager.stop_communicating()
         super().delete_device()
 
@@ -80,7 +81,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=float, unit="°C")
     def tank_outlet_temp(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("tank_outlet_temp")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -88,7 +89,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=float, unit="°C")
     def evaporator_outlet_temp(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("evaporator_outlet_temp")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -96,7 +97,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=float, unit="°C")
     def set_point(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("set_point")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -104,7 +105,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def chiller_state(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("chiller_state")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -112,7 +113,7 @@ class MTAChiller(Device):
 
     @chiller_state.write
     def chiller_state(self, state):
-        """Write method for attribute"""
+        """Write method for attribute."""
         if state:
             self._chiller_manager.chiller_on()
         else:
@@ -120,7 +121,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def compressor_state(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("compressor_state")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -128,7 +129,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def water_pump_state(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("water_pump_state")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -138,7 +139,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def chiller_antifreeze_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("chiller_antifreeze_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -146,7 +147,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def compressor_overload_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("compressor_overload_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -154,7 +155,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def condenser_fan_overload_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("condenser_fan_overload_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -162,7 +163,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def pump_overload_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("pump_overload_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -170,7 +171,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def evaporator_flow_switch_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("evaporator_flow_switch_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -178,7 +179,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def general_phase_monitor_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("general_phase_monitor_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -186,7 +187,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def high_pressure_switch_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("high_pressure_switch_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -194,7 +195,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def low_pressure_switch_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("low_pressure_switch_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -202,7 +203,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def chiller_disconnected_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("chiller_disconnected_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -210,7 +211,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def probe_1_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("probe_1_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -218,7 +219,7 @@ class MTAChiller(Device):
 
     @attribute(dtype=bool)
     def probe_2_alarm(self):
-        """Read method for attribute"""
+        """Read method for attribute."""
         attr = self._chiller_manager.get_attribute_value("probe_2_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
@@ -228,18 +229,18 @@ class MTAChiller(Device):
 
     @command
     def mute_alarms(self):
-        """Mutes all alarms"""
+        """Mutes all alarms."""
         self._chiller_manager.alarm_mute()
 
     @command
     def reset_alarms(self):
-        """Resets all alarms"""
+        """Reset all alarms."""
         self._chiller_manager.alarm_reset()
 
     #### Callback functions ####
 
     def update_communication_state(self, state: str):
-        """Updates the communication state of the device"""
+        """Update the communication state of the device."""
         self._communication_state = state
 
         self._update_state()
@@ -247,7 +248,7 @@ class MTAChiller(Device):
     def update_component_state(
         self, power: str | None = None, fault: bool | None = None
     ):
-        """Updates the component state of the device"""
+        """Update the component state of the device."""
         if power is not None:
             self._component_power = power
         if fault is not None:
@@ -258,7 +259,7 @@ class MTAChiller(Device):
     def update_attribute(
         self, attr_name: str, value: int | float | str, in_alarm=False
     ):
-        """Updates a particular attribute"""
+        """Update a particular attribute."""
         if in_alarm:
             self.push_change_event(attr_name, value, time(), AttrQuality.ATTR_ALARM)
         else:
@@ -267,7 +268,7 @@ class MTAChiller(Device):
     #### Helper functions ####
 
     def _update_state(self):
-        """Implement the operational state matrix"""
+        """Implement the operational state matrix."""
 
         if self._communication_state == "DISABLED":
             self.set_state(DevState.DISABLE)

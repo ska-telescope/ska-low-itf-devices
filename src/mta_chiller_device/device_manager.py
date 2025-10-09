@@ -1,4 +1,4 @@
-"""This module uses the XWeb Evo client to control and monitor the chiller system"""
+"""Thi module uses the XWeb Evo client to control and monitor the chiller system."""
 
 from threading import Event, Thread
 
@@ -18,7 +18,7 @@ from mta_chiller_device.xweb_evo_client import XWebEvoClient
 
 
 class MTAChillerManager:
-    """A class to monitor and control the MTA chillers"""
+    """A class to monitor and control the MTA chillers."""
 
     def __init__(
         self,
@@ -124,7 +124,7 @@ class MTAChillerManager:
             self._attribute_cache[attr["name"]] = None
 
     def start_communicating(self):
-        """Begins communication with the chillers"""
+        """Begin communication with the chillers."""
 
         # The chiller system has only one power level,
         # so should have state ON once communication has been established
@@ -137,7 +137,7 @@ class MTAChillerManager:
         self._update_communication_state("NOT_ESTABLISHED")
 
     def stop_communicating(self):
-        """Closes communication with the chillers"""
+        """Close communication with the chillers."""
 
         self._shutdown_event.set()
         self._thread.join()  # wait for the thread to terminate
@@ -145,29 +145,29 @@ class MTAChillerManager:
         self._update_communication_state("DISABLED")
 
     def get_attribute_value(self, attr_name: str):
-        """Returns the last reported value for the specified attribute"""
+        """Return the last reported value for the specified attribute."""
 
         return self._attribute_cache[attr_name]
 
     #### COMMANDS ####
 
     def chiller_on(self):
-        """Turns on the specified chiller"""
+        """Turn on the specified chiller."""
 
         self._send_command("Chiller")
 
     def chiller_off(self):
-        """Turns off the specified chiller"""
+        """Turn off the specified chiller."""
 
         self._send_command("Stand_by")
 
     def alarm_mute(self):
-        """Mutes the alarms for the specified chiller"""
+        """Mute the alarms for the specified chiller."""
 
         self._send_command("AlarmMute")
 
     def alarm_reset(self):
-        """Resets the alarms for the specified chiller"""
+        """Reset the alarms for the specified chiller."""
 
         self._send_command("AlarmReset")
 

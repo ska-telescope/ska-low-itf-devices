@@ -33,9 +33,9 @@ def manual_test_powercycle():
     with DeviceTestContext(MTAChiller, properties=properties) as proxy:
         sleep(20)
 
-        assert proxy.chiller_state, (
-            "You must select the chiller that is currently on for this test"
-        )
+        assert (
+            proxy.chiller_state
+        ), "You must select the chiller that is currently on for this test"
 
         proxy.chiller_state = False
         sleep(10)

@@ -1,4 +1,4 @@
-"""This module contains the code that directly interfaces to the XWeb Evo online platform"""
+"""This module contains the code that directly interfaces to the XWeb Evo online platform."""
 
 from datetime import datetime, timedelta
 
@@ -13,7 +13,7 @@ from . import utils
 
 
 class XWebEvoClient:
-    """A Python client for communicating with the XWeb Evo chiller user interface"""
+    """A Python client for communicating with the XWeb Evo chiller user interface."""
 
     def __init__(self, ip: str, username: str, hashed_password: str):
         self.ip: str = ip
@@ -27,20 +27,20 @@ class XWebEvoClient:
         self.devices: list[ClientDevice] = []
 
     def start(self):
-        """Opens communication to the XWeb Evo platform"""
+        """Open communication to the XWeb Evo platform."""
 
         self.login()
         self.load_config()
         self.open_socket()
 
     def close(self):
-        """Closes the web socket and clears the session string"""
+        """Close the web socket and clears the session string."""
 
         self._sses = None
         self.close_socket()
 
     def login(self):
-        """Logs into the XWeb Evo system to obtain authentication credentials"""
+        """Log into the XWeb Evo system to obtain authentication credentials."""
 
         url = f"{self.base_url}/cgi-bin/xwmanager.lua"
         data = {
@@ -61,7 +61,7 @@ class XWebEvoClient:
         )
 
     def maintain_session(self):
-        """Keeps the XWeb Evo login session active"""
+        """Keep the XWeb Evo login session active."""
 
         assert self._sses, "The client must be logged in first"
 
@@ -79,23 +79,23 @@ class XWebEvoClient:
             raise ValueError("Unable to maintain the session")
 
     def open_socket(self):
-        """Opens the websocket connection with the XWeb Evo system"""
+        """Open the websocket connection with the XWeb Evo system."""
 
         self._socket = connect(f"ws://{self.ip}/evocli", origin=self.base_url)
 
     def close_socket(self):
-        """Closes the websocket connection with the XWeb Evo system"""
+        """Close the websocket connection with the XWeb Evo system."""
 
         self._socket.close()
 
     def recieve_socket(self):
-        """Waits for and receives a single websocket message"""
+        """Wait for and receives a single websocket message."""
 
         message = self._socket.recv(timeout=60)
         return utils.transform_socket_message(message, self.devices)
 
     def load_config(self):
-        """Loads the system configuration (chillers, commands, etc.) from the XWeb Evo platform"""
+        """Load the system configuration (chillers, commands, etc.) from the XWeb Evo platform."""
 
         assert self._sses, "The client must be logged in first"
 
@@ -115,7 +115,7 @@ class XWebEvoClient:
         self.control_groups, self.devices = utils.transform_to_config(response.json())
 
     def get_alarms(self) -> list[Alarm]:
-        """Loads any active alarms from the XWeb Evo platform"""
+        """Load any active alarms from the XWeb Evo platform."""
 
         assert self._sses, "The client must be logged in first"
 
@@ -143,7 +143,7 @@ class XWebEvoClient:
         return utils.transform_to_alarms(response.json(), self.devices)
 
     def send_command(self, device_id: str, command_id: str):
-        """Sends the specified command to the XWeb Evo system"""
+        """Send the specified command to the XWeb Evo system."""
 
         assert self._sses, "The client must be logged in first"
         assert self._command_plgid, "Invalid command authentication"
@@ -164,7 +164,7 @@ class XWebEvoClient:
             raise ValueError("The requested command reported an error")
 
     def lookup_command(self, device_id: str, name: str) -> str:
-        """Returns the command ID for a given command name/readable code"""
+        """Return the command ID for a given command name/readable code."""
 
         command_id: str = (
             _.chain(self.devices)
@@ -177,7 +177,7 @@ class XWebEvoClient:
         return command_id
 
     def lookup_device(self, name: str) -> str:
-        """Returns the chiller ID for a given chiller name"""
+        """Return the chiller ID for a given chiller name."""
 
         device_id: str = (_.chain(self.devices).values().find({"name": name}).value())[
             "id"

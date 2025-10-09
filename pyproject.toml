@@ -78,11 +78,14 @@ max-complexity = 10
 # E203 and W503 conflict with black
 extend-ignore = [
     "E203",  # conflicts with black - whitespace around slice
+    "E266",  # allow block comments starting with multiple #s
     "E501",  # line too long. Trust black
     "D100",  # I'll add module docstrings if I want to
     "D101",  # Likewise for classes
+    "D104",  # Likewise for __init__.py
+    "D107",  # Likewise for __init__
     "D200",  # I like one line docstrings not to have to share the line with quotes
-    "D202"   # Enforces no blank line after docstring, weird when a fn starts with a comment
+    "D202",  # Enforces no blank line after docstring, weird when a fn starts with a comment
 ]
 exclude = "tests/"
 
@@ -116,6 +119,6 @@ ignore-imports = "yes"
 
 [tool.pylint.master]
 ignore = "tests"
-disable = ["C0301", "W0511", "missing-module-docstring", "missing-class-docstring"]
+disable = ["D107", "C0301", "W0511", "missing-module-docstring", "missing-class-docstring"]
 
 [tool.coverage.run]
