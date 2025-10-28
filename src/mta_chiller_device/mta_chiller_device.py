@@ -4,7 +4,7 @@ import os
 from time import time
 
 from tango import AttrQuality, DevState
-from tango.server import Device, attribute, command, device_property
+from tango.server import Device, attribute, command, device_property, run
 
 from mta_chiller_device.custom_types import ClientConfig
 from mta_chiller_device.device_manager import MTAChillerManager
@@ -291,5 +291,17 @@ class MTAChiller(Device):
         print(self.dev_state())
 
 
+def main() -> int:  # pragma: no cover
+    """
+    Entry point for module.
+
+    :param args: positional arguments
+    :param kwargs: named arguments
+
+    :return: exit code
+    """
+    return run([MTAChiller])
+
+
 if __name__ == "__main__":
-    MTAChiller.run_server()
+    main()

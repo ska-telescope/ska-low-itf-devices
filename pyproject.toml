@@ -15,6 +15,9 @@ packages = [
     { include = "mta_chiller_device", from = "src" },
 ]
 
+[tool.poetry.scripts]
+chiller = "mta_chiller_device.mta_chiller_device:main"
+
 [tool.poetry.dependencies]
 python = "~3.10"  # otherwise we don't get ska-tango-base 0.18.1
 pytango = "^10.0.0"
