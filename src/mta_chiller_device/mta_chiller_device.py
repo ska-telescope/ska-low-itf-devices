@@ -57,7 +57,7 @@ class MTAChiller(Device):
 
         # Create an instance of the chiller device manager
         client_config: ClientConfig = {
-            "ip": self.host,
+            "ip_address": self.host,
             "username": os.getenv("XWEB_USERNAME"),
             "hashed_password": os.getenv("XWEB_HASHED_PASSWORD"),
         }

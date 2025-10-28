@@ -61,7 +61,7 @@ class ControlGroup(TypedDict):
 
 
 class ClientConfig(TypedDict):
-    ip: str
+    ip_address: str
     username: str
     hashed_password: str
 
