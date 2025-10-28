@@ -33,7 +33,8 @@ python-post-lint:
 	mypy src/ tests/
 
 python-pre-test:
-	echo "$(SKA_SNMP_DEVICE_SIMULATOR_USER)"
+	[[ -n "${CI_JOB_ID}" ]] && useradd -m tango
+	echo "SKA_SNMP_DEVICE_SIMULATOR_USER=$(SKA_SNMP_DEVICE_SIMULATOR_USER)"
 
 ### PYTHON END
 
