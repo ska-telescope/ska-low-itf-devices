@@ -1,6 +1,7 @@
 import os
 from time import sleep
 
+import pytest
 from dotenv import load_dotenv
 from tango import DevState
 from tango.test_context import DeviceTestContext
@@ -14,6 +15,7 @@ ip = os.getenv("BASE_IP")
 properties = {"host": ip, "device_name": "MTA Chiller 2"}
 
 
+@pytest.mark.skipif(not bool(ip), reason="Chiller IP address not defined")
 def test_init():
     """Tests whether the MTA chiller device initialises correctly"""
     print("test_init")
@@ -47,6 +49,7 @@ def manual_test_powercycle():
     print("PASSED: Please check that one chiller is switched ON")
 
 
+@pytest.mark.skipif(not bool(ip), reason="Chiller IP address not defined")
 def test_attributes() -> None:
     """Tests whether the MTA Chiller attributes are exposed correctly through the tango device"""
     print("test_attributes")
