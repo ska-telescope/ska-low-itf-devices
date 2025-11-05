@@ -19,24 +19,28 @@ attributes:
     oid: [UPS-MIB, upsBatteryVoltage, 0]
     polling_period: 10000
 
-  - name: batteryCurrent
-    oid: [UPS-MIB, upsBatteryCurrent, 0]
-    polling_period: 10000
+  #- name: batteryCurrent
+  #  oid: [UPS-MIB, upsBatteryCurrent, 0]
+  #  polling_period: 10000
 
-  - name: batteryTemperature
-    oid: [UPS-MIB, upsBatteryTemperature, 0]
-    polling_period: 10000
+  #- name: batteryTemperature
+  #  oid: [UPS-MIB, upsBatteryTemperature, 0]
+  #  polling_period: 10000
 
   - name: inputFrequency
     oid: [UPS-MIB, upsInputFrequency, 1]
     polling_period: 10000
 
-  - name: inputVoltage
-    oid: [UPS-MIB, upsInputVoltage, 1]
+  - name: input{}Voltage
+    indexes:
+      - [1, 3]
+    oid: [UPS-MIB, upsInputVoltage]
     polling_period: 10000
 
-  - name: inputCurrent
-    oid: [UPS-MIB, upsInputCurrent, 1]
+  - name: input{}Current
+    indexes:
+      - [1, 3]
+    oid: [UPS-MIB, upsInputCurrent]
     polling_period: 10000
 
   - name: outputSource
@@ -47,10 +51,22 @@ attributes:
     oid: [UPS-MIB, upsOutputFrequency, 0]
     polling_period: 10000
 
-  - name: outputVoltage
-    oid: [UPS-MIB, upsOutputVoltage, 1]
+  - name: output{}Voltage
+    indexes:
+      - [1, 3]
+    oid: [UPS-MIB, upsOutputVoltage]
     polling_period: 10000
 
-  - name: outputCurrent
-    oid: [UPS-MIB, upsOutputCurrent, 1]
+  - name: output{}Current
+    indexes:
+      - [1, 3]
+    oid: [UPS-MIB, upsOutputCurrent]
+    polling_period: 10000
+
+  - name: remainingRunTime
+    oid: [UPS-MIB, upsEstimatedMinutesRemaining, 0]
+    polling_period: 10000
+
+  - name: batteryCharge
+    oid: [UPS-MIB, upsEstimatedChargeRemaining, 0]
     polling_period: 10000
