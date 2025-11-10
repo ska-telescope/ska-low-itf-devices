@@ -1,0 +1,60 @@
+attributes:
+  # Relatively static attributes that we'll poll only once
+  - name: firmwareVersion
+    oid: [ RARITAN-PDU2-MIB, boardFirmwareVersion, 1, 1, 1 ]
+    polling_period: .inf
+    # 1.3.6.1.4.1.13742.6.3.2.3.1.6.1.1.1
+
+  - name: modelNumber
+    oid: [ RARITAN-PDU2-MIB, pduModel, 1 ]
+    polling_period: .inf
+    # 1.3.6.1.4.1.13742.6.3.2.1.1.3.1
+
+  - name: serialNumber
+    oid: [ RARITAN-PDU2-MIB, pduSerialNumber, 1 ]
+    polling_period: .inf
+    # 1.3.6.1.4.1.13742.6.3.2.1.1.4.1
+
+  - name: systemDescription
+    oid: [ SNMPv2-MIB, sysDescr, 0 ]
+    polling_period: .inf
+
+  - name: totalActivePower
+    oid: [ RARITAN-PDU2-MIB, measurementsInletSensorValue, 1, 1, 5 ]
+    polling_period: 10000
+    # 1.3.6.1.4.1.13742.6.5.2.3.1.4.1.1.5
+
+  - name: totalApparentPower
+    oid: [ RARITAN-PDU2-MIB, measurementsInletSensorValue, 1, 1, 6 ]
+    polling_period: 10000
+
+  # more likely to change but only occasionally
+  - name: outlet{}Name
+    indexes:
+      - [ 1, 24 ]
+    oid: [ RARITAN-PDU2-MIB, outletName, 1 ]
+    polling_period: 10000
+    # 1.3.6.1.4.1.13742.6.3.5.3.1.3.1.1-24
+
+  - name: outlet{}Command
+    oid: [ RARITAN-PDU2-MIB, switchingOperation, 1 ]
+    indexes:
+      - [1, 24]
+    polling_period: 10000
+    # 1.3.6.1.4.1.13742.6.4.1.2.1.2.1.1-24
+
+  # update these at the poll rate
+  - name: outlet{}State
+    oid: [ RARITAN-PDU2-MIB, outletSwitchingState, 1 ]
+    indexes:
+      - [1, 24]
+    polling_period: 10000
+    # 1.3.6.1.4.1.13742.6.4.1.2.1.3.1.1-24
+
+  - name: outlet{0}Current
+    oid: [ RARITAN-PDU2-MIB, measurementsOutletSensorValue, 1 ]
+    indexes:
+      - [1, 24]
+      - [1, 1]
+    polling_period: 10000
+    # 1.3.6.1.4.1.13742.6.5.4.3.1.4.1.1-24.1   
