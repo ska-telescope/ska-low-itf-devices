@@ -201,6 +201,7 @@ class MTAChillerManager:
                     ValueError,
                     WebSocketException,
                     AssertionError,
+                    TimeoutError,
                 ) as ex:
                     print(f"Unable to connect: {ex}")
                     reconnect_event.set()
@@ -239,7 +240,7 @@ class MTAChillerManager:
 
                     self._process_new_alarms(alarms, True)
 
-                except ConnectionClosed:
+                except (ConnectionClosed, TimeoutError):
                     print("Socket connection was closed")
                     self._update_communication_state("NOT_ESTABLISHED")
                     reconnect_event.set()
