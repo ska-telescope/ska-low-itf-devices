@@ -43,3 +43,19 @@ attributes:
       - [ 1, 16 ]
     oid: [ENLOGIC-PDU-MIB, pduOutletSwitchedSTATUSState, 1]
 
+  # Sensors
+  - name: sensor{}Name
+    indexes:
+      - [1, 4]
+    oid: [ENLOGIC-PDU-MIB, pduExternalSensorSTATUSName, 1]
+
+  - name: sensor{}Type
+    indexes:
+      - [1, 4]
+    oid: [ENLOGIC-PDU-MIB, pduExternalSensorNamePlateType, 1]
+
+  - name: sensor{}Value
+    indexes:
+      - [1, 4]
+    oid: [ENLOGIC-PDU-MIB, pduExternalSensorSTATUSValue, 1]
+
