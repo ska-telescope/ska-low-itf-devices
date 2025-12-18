@@ -7,6 +7,8 @@ from tango import DevState
 from tango.test_context import DeviceTestContext
 
 from mta_chiller_device.mta_chiller_device import MTAChiller
+from mta_chiller_device.device_manager import MTAChillerManager
+from mta_chiller_device.utils import generate_alarms_list
 
 # Load env variables
 load_dotenv()
@@ -35,9 +37,9 @@ def manual_test_powercycle():
     with DeviceTestContext(MTAChiller, properties=properties) as proxy:
         sleep(20)
 
-        assert (
-            proxy.chiller_state
-        ), "You must select the chiller that is currently on for this test"
+        assert proxy.chiller_state, (
+            "You must select the chiller that is currently on for this test"
+        )
 
         proxy.chiller_state = False
         sleep(10)
@@ -115,9 +117,117 @@ def manual_test_reconnect():
     print("PASSED")
 
 
+def test_generate_alarms_list():
+    """Tests the function that determines what alarms should be reported for a device"""
+    print("test_generate_alarms_list")
+
+    dev_name = "MTA Chiller 2"
+    attr_details = {
+        "ChillAntifrzAlrCir1": {
+            "name": "chiller_antifreeze_alarm",
+            "is_alarm": True,
+        },
+        "Cmp1Overload": {
+            "name": "compressor_overload_alarm",
+            "is_alarm": True,
+        },
+        "CondFanOvLdCir1": {
+            "name": "condenser_fan_overload_alarm",
+            "is_alarm": True,
+        },
+        "Evap1PumpOverload": {
+            "name": "pump_overload_alarm",
+            "is_alarm": True,
+        },
+    }
+
+    # Test 1: No alarms raised from the alarms endpoint for chiller 2
+    # Expected outcome: All alarms are False
+    test_alarms = [
+        {"device_name": "MTA Chiller 1", "alarm_code": "ChillAntifrzAlrCir1"},
+        {"device_name": "MTA Chiller 1", "alarm_code": "Cmp1Overload"},
+    ]
+    results = generate_alarms_list(test_alarms, False, attr_details, dev_name)
+    assert results == {
+        "chiller_antifreeze_alarm": False,
+        "compressor_overload_alarm": False,
+        "condenser_fan_overload_alarm": False,
+        "pump_overload_alarm": False,
+    }
+
+    # Test 2: One alarm raised from the alarms endpoint for chiller 2
+    # Expected outcome: One alarm is true, the rest are false
+    test_alarms = [
+        {"device_name": "MTA Chiller 1", "alarm_code": "ChillAntifrzAlrCir1"},
+        {"device_name": "MTA Chiller 1", "alarm_code": "Cmp1Overload"},
+        {"device_name": "MTA Chiller 2", "alarm_code": "ChillAntifrzAlrCir1"},
+    ]
+    results = generate_alarms_list(test_alarms, False, attr_details, dev_name)
+    assert results == {
+        "chiller_antifreeze_alarm": True,
+        "compressor_overload_alarm": False,
+        "condenser_fan_overload_alarm": False,
+        "pump_overload_alarm": False,
+    }
+
+    # Test 3: Two alarms raised from the alarms endpoint for chiller 2
+    # Expected outcome: Two alarms are true, the rest are false
+    test_alarms = [
+        {"device_name": "MTA Chiller 1", "alarm_code": "ChillAntifrzAlrCir1"},
+        {"device_name": "MTA Chiller 1", "alarm_code": "Cmp1Overload"},
+        {"device_name": "MTA Chiller 2", "alarm_code": "ChillAntifrzAlrCir1"},
+        {"device_name": "MTA Chiller 2", "alarm_code": "Evap1PumpOverload"},
+    ]
+    results = generate_alarms_list(test_alarms, False, attr_details, dev_name)
+    assert results == {
+        "chiller_antifreeze_alarm": True,
+        "compressor_overload_alarm": False,
+        "condenser_fan_overload_alarm": False,
+        "pump_overload_alarm": True,
+    }
+
+    # Test 4: No alarms are raised from a socket message for chiller 2
+    # Expected outcome: The results dict is empty - I.e. no changes
+    test_alarms = [
+        {"device_name": "MTA Chiller 1", "alarm_code": "ChillAntifrzAlrCir1"},
+        {"device_name": "MTA Chiller 1", "alarm_code": "Cmp1Overload"},
+    ]
+    results = generate_alarms_list(test_alarms, True, attr_details, dev_name)
+    assert results == {}
+
+    # Test 5: One alarm is raised from a socket message for chiller 2
+    # Expected outcome: One alarm is true
+    test_alarms = [
+        {"device_name": "MTA Chiller 1", "alarm_code": "ChillAntifrzAlrCir1"},
+        {"device_name": "MTA Chiller 1", "alarm_code": "Cmp1Overload"},
+        {"device_name": "MTA Chiller 2", "alarm_code": "Cmp1Overload"},
+    ]
+    results = generate_alarms_list(test_alarms, True, attr_details, dev_name)
+    assert results == {
+        "compressor_overload_alarm": True,
+    }
+
+    # Test 6: Two alarms are raised from a socket message for chiller 2
+    # Expected outcome: Two alarms are true
+    test_alarms = [
+        {"device_name": "MTA Chiller 1", "alarm_code": "ChillAntifrzAlrCir1"},
+        {"device_name": "MTA Chiller 1", "alarm_code": "Cmp1Overload"},
+        {"device_name": "MTA Chiller 2", "alarm_code": "Cmp1Overload"},
+        {"device_name": "MTA Chiller 2", "alarm_code": "ChillAntifrzAlrCir1"},
+    ]
+    results = generate_alarms_list(test_alarms, True, attr_details, dev_name)
+    assert results == {
+        "compressor_overload_alarm": True,
+        "chiller_antifreeze_alarm": True,
+    }
+
+    print("PASSED")
+
+
 if __name__ == "__main__":
     # test_init()
-    test_attributes()
+    # test_attributes()
     # test_reconnect()
+    test_generate_alarms_list()
     # IMPORTANT: Only uncomment below if you have access to the XWeb Evo online dashboard
     # test_powercycle()

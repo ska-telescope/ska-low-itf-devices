@@ -15,6 +15,7 @@ from mta_chiller_device.custom_types import (
     Datapoint,
 )
 from mta_chiller_device.xweb_evo_client import XWebEvoClient
+from mta_chiller_device.utils import generate_alarms_list
 
 
 class MTAChillerManager:
@@ -257,32 +258,9 @@ class MTAChillerManager:
                 self._update_attribute(tango_name, formatted_value)
 
     def _process_new_alarms(self, alarms: list[Alarm], from_socket=False):
-        alarms_to_report = {}
-
-        # If we are looking at the response from polling the alarms endpoint
-        # we will clear any active alarms first
-        if not from_socket:
-            attr_names = [
-                a["name"]
-                for a in self._attribute_details.values()
-                if "is_alarm" in a and a["is_alarm"]
-            ]
-
-            for name in attr_names:
-                alarms_to_report[name] = False
-
-        # Filter only the alarm codes that we are interested in for this device
-        dev_alarms = [
-            a
-            for a in alarms
-            if a["alarm_code"] in self._attribute_details
-            and a["device_name"] == self._device_name
-        ]
-
-        for alarm in dev_alarms:
-            alarm_code = alarm["alarm_code"]
-            attr_name = self._attribute_details[alarm_code]["name"]
-            alarms_to_report[attr_name] = True
+        alarms_to_report = generate_alarms_list(
+            alarms, from_socket, self._attribute_details, self._device_name
+        )
 
         # Update the alarm attributes
         for attr_name, val in alarms_to_report.items():

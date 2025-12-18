@@ -1,4 +1,4 @@
-"""This module contains util functions for transforming HTTP responses."""
+"""This module contains util functions for transforming HTTP responses and other functions."""
 
 import json
 from urllib.parse import unquote
@@ -12,6 +12,7 @@ from mta_chiller_device.custom_types import (
     ClientDevice,
     ControlGroup,
     Datapoint,
+    AttributeDetails,
 )
 
 
@@ -237,3 +238,38 @@ def transform_to_alarms(response: str, devices: list[ClientDevice]) -> list[Alar
     )
 
     return alarms
+
+
+def generate_alarms_list(
+    alarms: list[Alarm],
+    from_socket: bool,
+    attr_details: AttributeDetails,
+    device_name,
+):
+    alarms_to_report = {}
+
+    alarm_names = [
+        attr["name"]
+        for attr in attr_details.values()
+        if "is_alarm" in attr and attr["is_alarm"]
+    ]
+
+    # The response from polling the alarms endpoint includes all active alarms
+    # So, we clear all possible alarms first
+    if not from_socket:
+        for name in alarm_names:
+            alarms_to_report[name] = False
+
+    # Filter only the alarm codes that we are interested in for this device
+    dev_alarms = [
+        a
+        for a in alarms
+        if a["alarm_code"] in attr_details and a["device_name"] == device_name
+    ]
+
+    for alarm in dev_alarms:
+        alarm_code = alarm["alarm_code"]
+        attr_name = attr_details[alarm_code]["name"]
+        alarms_to_report[attr_name] = True
+
+    return alarms_to_report
