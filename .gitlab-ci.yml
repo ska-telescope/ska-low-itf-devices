@@ -1,5 +1,7 @@
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  SKA_DEFAULT_RUNNER: aws-ska-default
+  SKA_K8S_RUNNER: aws-ska-k8s
 cache:
   paths:
     - build
