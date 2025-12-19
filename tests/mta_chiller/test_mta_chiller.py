@@ -5,10 +5,15 @@ import pytest
 from dotenv import load_dotenv
 from tango import DevState
 from tango.test_context import DeviceTestContext
+import json
 
 from mta_chiller_device.mta_chiller_device import MTAChiller
-from mta_chiller_device.device_manager import MTAChillerManager
-from mta_chiller_device.utils import generate_alarms_list
+from response_data import socket_data, getsetup_response
+from mta_chiller_device.utils import (
+    generate_alarms_list,
+    transform_to_config,
+    transform_socket_message,
+)
 
 # Load env variables
 load_dotenv()
@@ -224,10 +229,96 @@ def test_generate_alarms_list():
     print("PASSED")
 
 
+def test_parse_config():
+    print("test_parse_config")
+    resp_data = json.loads(getsetup_response)
+
+    control_groups, devices = transform_to_config(resp_data)
+
+    assert len(control_groups) == 2
+    assert len(devices) == 2
+
+    assert devices["4"]["name"] == "MTA Chiller 1"
+    assert devices["6"]["name"] == "MTA Chiller 2"
+
+    assert len(devices["4"]["commands"]) > 0
+    assert len(devices["4"]["attributes"]) > 0
+
+    assert len(devices["6"]["commands"]) > 0
+    assert len(devices["6"]["attributes"]) > 0
+
+    print("PASSED")
+
+
+def test_parse_sockets():
+    print("test_parse_sockets")
+
+    resp_data = json.loads(getsetup_response)
+    _, devices = transform_to_config(resp_data)
+
+    # Test 1: First connection message
+    datapoints, alarms = transform_socket_message(
+        socket_data["skt_connection_1"], devices
+    )
+    assert datapoints == []
+    assert alarms == []
+
+    # Test 2: Second connection message
+    datapoints, alarms = transform_socket_message(
+        socket_data["skt_connection_2"], devices
+    )
+    assert len(datapoints) > 0
+    assert (
+        next(
+            filter(
+                lambda x: x["device_name"] == "MTA Chiller 1"
+                and x["readable_attribute_name"] == "Chiller Set Point",
+                datapoints,
+            )
+        )["value"]
+        == "10.0"
+    )
+    assert alarms == []
+
+    # Test 3: Message with 1 attribute
+    datapoints, alarms = transform_socket_message(socket_data["skt_1_attr"], devices)
+    assert len(datapoints) == 1
+    assert datapoints[0]["device_name"] == "MTA Chiller 2"
+    assert datapoints[0]["value"] == "9.3"
+    assert datapoints[0]["attribute_name"] == "Pb2_°C_bar"
+    assert alarms == []
+
+    # Test 4: Message with 2 attributes
+    datapoints, alarms = transform_socket_message(socket_data["skt_2_attrs"], devices)
+    assert len(datapoints) == 2
+    assert datapoints[0]["device_name"] == "MTA Chiller 2"
+    assert datapoints[1]["device_name"] == "MTA Chiller 2"
+    assert alarms == []
+
+    # Test 5: Message with attributes for a different device
+    datapoints, alarms = transform_socket_message(socket_data["skt_other_dev"], devices)
+    assert len(datapoints) == 2
+    assert datapoints[0]["device_name"] == "MTA Chiller 1"
+    assert datapoints[1]["device_name"] == "MTA Chiller 1"
+    assert alarms == []
+
+    # Test 6: xwdate message
+    datapoints, alarms = transform_socket_message(socket_data["skt_xwdate"], devices)
+    assert datapoints == []
+    assert alarms == []
+
+    # Test 7: Message with alarms
+    # TODO: Record a socket message containing an alarm
+
+    print("PASSED")
+
+
 if __name__ == "__main__":
     # test_init()
     # test_attributes()
     # test_reconnect()
+    test_parse_config()
+    test_parse_sockets()
     test_generate_alarms_list()
     # IMPORTANT: Only uncomment below if you have access to the XWeb Evo online dashboard
     # test_powercycle()

@@ -246,6 +246,7 @@ def generate_alarms_list(
     attr_details: AttributeDetails,
     device_name,
 ):
+    """Generate a list of changes to be applied to the cached alarm values for the specified device"""
     alarms_to_report = {}
 
     alarm_names = [
