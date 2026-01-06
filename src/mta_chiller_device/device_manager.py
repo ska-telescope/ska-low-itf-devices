@@ -262,6 +262,10 @@ class MTAChillerManager:
             alarms, from_socket, self._attribute_details, self._device_name
         )
 
+        if from_socket:
+            print(f"Alarm status for {self._device_name}:")
+            print(alarms_to_report)
+
         # Update the alarm attributes
         for attr_name, val in alarms_to_report.items():
             self._attribute_cache[attr_name] = val

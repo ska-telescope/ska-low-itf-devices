@@ -27,7 +27,7 @@ def test_init():
     """Tests whether the MTA chiller device initialises correctly"""
     print("test_init")
 
-    with DeviceTestContext(MTAChiller, properties=properties) as proxy:
+    with DeviceTestContext(MTAChiller, properties=properties, process=True) as proxy:
         assert proxy.state() == DevState.UNKNOWN
         sleep(10)
         assert proxy.state() == DevState.ON
@@ -313,12 +313,29 @@ def test_parse_sockets():
     print("PASSED")
 
 
+def manual_test_alarm():
+    """Run this test with an active alarm on chiller 2 to check that the alarm is reported and remains until cleared.
+    To create an alarm on chiller 2 we turn off the UPS breaker for chiller 2 in SUT 3. This will cause a No-Link alarm"""
+    print("manual_test_alarm")
+
+    with DeviceTestContext(MTAChiller, properties=properties, process=True) as proxy:
+        sleep(30)
+        assert proxy.chiller_disconnected_alarm is True
+        sleep(30)
+        assert proxy.chiller_disconnected_alarm is True
+        sleep(30)
+        assert proxy.chiller_disconnected_alarm is True
+
+    print("PASSED")
+
+
 if __name__ == "__main__":
     # test_init()
     # test_attributes()
     # test_reconnect()
-    test_parse_config()
-    test_parse_sockets()
-    test_generate_alarms_list()
+    # test_parse_config()
+    # test_parse_sockets()
+    # test_generate_alarms_list()
+    manual_test_alarm()
     # IMPORTANT: Only uncomment below if you have access to the XWeb Evo online dashboard
     # test_powercycle()
