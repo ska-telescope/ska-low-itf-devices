@@ -262,7 +262,7 @@ class MTAChillerManager:
             alarms, from_socket, self._attribute_details, self._device_name
         )
 
-        if from_socket:
+        if not from_socket:
             print(f"Alarm status for {self._device_name}:")
             print(alarms_to_report)
 
