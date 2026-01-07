@@ -14,8 +14,8 @@ from mta_chiller_device.custom_types import (
     ComponentStateCallback,
     Datapoint,
 )
-from mta_chiller_device.xweb_evo_client import XWebEvoClient
 from mta_chiller_device.utils import generate_alarms_list
+from mta_chiller_device.xweb_evo_client import XWebEvoClient
 
 
 class MTAChillerManager:

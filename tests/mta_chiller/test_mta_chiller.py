@@ -1,18 +1,18 @@
+import json
 import os
 from time import sleep
 
 import pytest
 from dotenv import load_dotenv
+from response_data import getsetup_response, socket_data
 from tango import DevState
 from tango.test_context import DeviceTestContext
-import json
 
 from mta_chiller_device.mta_chiller_device import MTAChiller
-from response_data import socket_data, getsetup_response
 from mta_chiller_device.utils import (
     generate_alarms_list,
-    transform_to_config,
     transform_socket_message,
+    transform_to_config,
 )
 
 # Load env variables

@@ -7,12 +7,12 @@ import pydash as _
 
 from mta_chiller_device.custom_types import (
     Alarm,
+    AttributeDetails,
     ClientAttribute,
     ClientCommand,
     ClientDevice,
     ControlGroup,
     Datapoint,
-    AttributeDetails,
 )
 
 
