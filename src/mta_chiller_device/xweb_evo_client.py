@@ -1,7 +1,5 @@
 """This module contains the code that directly interfaces to the XWeb Evo online platform."""
 
-from datetime import datetime, timedelta
-
 import pydash as _
 import requests
 from websockets import ClientConnection
