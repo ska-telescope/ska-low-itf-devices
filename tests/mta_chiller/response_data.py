@@ -1,3 +1,5 @@
+"""This file contains mock response data from the XWeb client for testing."""
+
 #### Socket Testing ####
 socket_data = {
     "skt_connection_1": '{"first":1,"xwdate":{"y":2025,"m":12,"g":19,"h":9,"i":43},"g":1766108634,"acqrestart":-1,"sys":1,"acq":1,"alm":1,"str":1,"srv":1,"sch":1,"cro":1,"dew":1,"totalrms": 0,"totalm": 0,"ereml":0,"erfax":0,"erprn":0,"ersms":0,"ersnmp":0,"updt":0,"errstp":0,"di0":0,"wwwlock": 0,"maint": 0,"fsm":{"dfsm":[]}}',

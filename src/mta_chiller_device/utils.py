@@ -38,7 +38,7 @@ def transform_to_credentials(response) -> tuple[str, str]:
     return sses, plgid
 
 
-def transform_to_config(response) -> tuple[list[ControlGroup], list[ClientDevice]]:
+def transform_to_config(response) -> tuple[list[ControlGroup], dict[ClientDevice]]:
     """Extract the control groups and devices from the HTTP response."""
 
     # Locate the control groups
@@ -60,7 +60,7 @@ def transform_to_config(response) -> tuple[list[ControlGroup], list[ClientDevice
     )
 
     # Locate the devices
-    devices: list[ClientDevice] = (
+    devices: dict[ClientDevice] = (
         _.chain(response)
         .get("devices", {})
         .map_values(
@@ -127,7 +127,7 @@ def transform_to_attributes(device) -> list[ClientAttribute]:
 
 
 def transform_socket_message(
-    message: str, devices: list[ClientDevice]
+    message: str, devices: dict[ClientDevice]
 ) -> tuple[list[Datapoint], list[Alarm]]:
     """Transform a recieved socket message into attribute values and alarms."""
 
