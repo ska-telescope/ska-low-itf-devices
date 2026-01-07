@@ -143,10 +143,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("chiller_antifreeze_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def compressor_overload_alarm(self):
@@ -154,10 +153,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("compressor_overload_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def condenser_fan_overload_alarm(self):
@@ -165,10 +163,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("condenser_fan_overload_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def pump_overload_alarm(self):
@@ -176,10 +173,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("pump_overload_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def evaporator_flow_switch_alarm(self):
@@ -187,10 +183,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("evaporator_flow_switch_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def general_phase_monitor_alarm(self):
@@ -198,10 +193,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("general_phase_monitor_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def high_pressure_switch_alarm(self):
@@ -209,10 +203,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("high_pressure_switch_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def low_pressure_switch_alarm(self):
@@ -220,10 +213,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("low_pressure_switch_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def chiller_disconnected_alarm(self):
@@ -231,10 +223,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("chiller_disconnected_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def probe_1_alarm(self):
@@ -242,10 +233,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("probe_1_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     @attribute(dtype=bool)
     def probe_2_alarm(self):
@@ -253,10 +243,9 @@ class MTAChiller(Device):
         attr = self._chiller_manager.get_attribute_value("probe_2_alarm")
         if attr is None:
             return None, time(), AttrQuality.ATTR_INVALID
-        elif attr is True:
+        if attr is True:
             return attr, time(), AttrQuality.ATTR_ALARM
-        else:
-            return attr
+        return attr
 
     #### Commands ####
 
