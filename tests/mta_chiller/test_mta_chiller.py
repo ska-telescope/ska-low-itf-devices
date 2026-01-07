@@ -42,9 +42,9 @@ def manual_test_powercycle():
     with DeviceTestContext(MTAChiller, properties=properties) as proxy:
         sleep(20)
 
-        assert proxy.chiller_state, (
-            "You must select the chiller that is currently on for this test"
-        )
+        assert (
+            proxy.chiller_state
+        ), "You must select the chiller that is currently on for this test"
 
         proxy.chiller_state = False
         sleep(10)
@@ -315,7 +315,8 @@ def test_parse_sockets():
 
 def manual_test_alarm():
     """Run this test with an active alarm on chiller 2 to check that the alarm is reported and remains until cleared.
-    To create an alarm on chiller 2 we turn off the UPS breaker for chiller 2 in SUT 3. This will cause a No-Link alarm"""
+    To create an alarm on chiller 2 we turn off the UPS breaker for chiller 2 in SUT 3. This will cause a No-Link alarm
+    """
     print("manual_test_alarm")
 
     with DeviceTestContext(MTAChiller, properties=properties, process=True) as proxy:

@@ -218,9 +218,7 @@ def transform_to_alarms(response: str, devices: list[ClientDevice]) -> list[Alar
                 }
             )
         )
-        .filter_(  # filter for active alarms
-            lambda alarm: alarm["end_time"] == "null"
-        )
+        .filter_(lambda alarm: alarm["end_time"] == "null")  # filter for active alarms
         .map_(
             (
                 lambda value: {
