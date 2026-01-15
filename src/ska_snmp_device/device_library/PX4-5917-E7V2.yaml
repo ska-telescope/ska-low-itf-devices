@@ -74,7 +74,14 @@ attributes:
     polling_period: 10000
     # 1.3.6.1.4.1.13742.6.3.6.3.1.2.1.1-2
 
-  - name: sensor{}Value
+  - name: sensor1Value
+    oid: [ RARITAN-PDU2-MIB, measurementsExternalSensorValue, 1]
+    indexes:
+      - [1, 2]
+    polling_period: 10000
+    scaling_factor: 0.1 # Scale to Deg Celcius
+
+  - name: sensor2Value
     oid: [ RARITAN-PDU2-MIB, measurementsExternalSensorValue, 1]
     indexes:
       - [1, 2]
