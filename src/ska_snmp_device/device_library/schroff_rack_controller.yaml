@@ -1,0 +1,52 @@
+# Common OID prefix: 1.3.6.1.4.1.16394.200.1.1.xx
+
+attributes:
+  # Shared with Carel rack controllers
+  #- name: water_valve_percentage 
+  #  oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1 ]
+  #  polling_period: 10000
+
+  #- name: fan_percentage 
+  #  oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1 ]
+  #  polling_period: 10000
+
+  - name: cold_top_temp # 205.0
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 205, 0 ]
+    polling_period: 10000
+
+  - name: cold_bottom_temp # 206.0
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 206, 0 ]
+    polling_period: 10000
+
+  - name: warm_top_temp # 207.0
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 207, 0 ]
+    polling_period: 10000
+
+  - name: warm_bottom_temp # 208.0
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 208, 0 ]
+    polling_period: 10000
+
+  - name: diff_pressure # 209.0
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 209, 0 ]
+    polling_period: 10000
+
+  - name: fan1_speed # 2.0 - Max = 4,162.5 (3330 = 80% set point)
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 2, 0 ]
+    polling_period: 10000
+
+  - name: fan2_speed # 1.0
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 1, 0 ]
+    polling_period: 10000
+
+  #- name: water_supply_temp 
+  #  oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1 ]
+  #  polling_period: 10000
+
+  - name: water_flow # 212.0
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 212, 0 ]
+    polling_period: 10000
+
+  # Available on Schroff rack controllers
+  - name: water_return_temp # 211.0
+    oid: [ SNMPv2-SMI, enterprises, 16394, 200, 1, 1, 211, 0 ]
+    polling_period: 10000

@@ -9,13 +9,14 @@ from dataclasses import dataclass
 from enum import Enum, EnumMeta, IntEnum
 from functools import reduce
 from math import ceil
+from struct import unpack
 from typing import Any
 
 from pyasn1.type.base import Asn1Type
 from pyasn1.type.constraint import ValueRangeConstraint
 from pyasn1.type.namedval import NamedValues
 from pyasn1.type.univ import Integer
-from pysnmp.proto.rfc1902 import Bits, OctetString
+from pysnmp.proto.rfc1902 import Bits, OctetString, Opaque
 from tango import AttrDataFormat, DevULong64
 
 from ska_low_itf_devices.attribute_polling_component_manager import AttrInfo
@@ -45,6 +46,13 @@ def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
         ]
     if isinstance(value, OctetString):
         return str(value)
+    if isinstance(value, Opaque):
+        # ASN_OPAQUE_FLOAT:
+        # Take the byte representation of the Opaque type and pad with one byte.
+        # This gives us the required 8 byte buffer for struct.unpack.
+        # However, we can discard the first 4 bytes ('x') as they don't contain the float.
+        bytes = b"\0" + value.asOctets()
+        return unpack(">xxxxf", bytes)[0]
     return value
 
 
@@ -89,6 +97,10 @@ def attr_args_from_snmp_type(snmp_type: Asn1Type) -> dict[str, Any]:
     elif isinstance(snmp_type, OctetString):
         attr_args.update(
             dtype=str,
+        )
+    elif isinstance(snmp_type, Opaque):
+        attr_args.update(
+            dtype=float,
         )
     elif isinstance(snmp_type, Integer):
         # Specific case where an integer field has an enum constraint.

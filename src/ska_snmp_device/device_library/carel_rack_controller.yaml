@@ -1,44 +1,44 @@
 attributes:
   - name: water_valve_percentage # 1.3.6.1.4.1.9839.1.2.70.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1 , 2, 70, 0 ]
+    oid: [ CAREL-RACK-CONTROLER, waterValvePercentage, 0 ]
     polling_period: 10000
 
   - name: fan_percentage # 1.3.6.1.4.1.9839.1.2.71.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 71, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, fanPercentage, 0 ]
     polling_period: 10000
 
   - name: cold_top_temp # 1.3.6.1.4.1.9839.1.2.61.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 61, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, coldTopTemperature, 0 ] #
     polling_period: 10000
 
   - name: cold_bottom_temp # 1.3.6.1.4.1.9839.1.2.62.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 62, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, coldBottomTemperature, 0 ] #
     polling_period: 10000
 
   - name: warm_top_temp # 1.3.6.1.4.1.9839.1.2.63.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 63, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, warmTopTemperature, 0 ] #
     polling_period: 10000
 
   - name: warm_bottom_temp # 1.3.6.1.4.1.9839.1.2.64.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 64, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, warmBottomTemperature, 0 ] #
     polling_period: 10000
 
   - name: diff_pressure # 1.3.6.1.4.1.9839.1.2.65.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 65, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, differentialPressure, 0 ] #
     polling_period: 10000
 
   - name: fan1_speed # 1.3.6.1.4.1.9839.1.2.66.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 66, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, fan1Speed, 0 ]
     polling_period: 10000
 
   - name: fan2_speed # 1.3.6.1.4.1.9839.1.2.67.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 67, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, fan2Speed, 0 ]
     polling_period: 10000
 
   - name: water_supply_temp # 1.3.6.1.4.1.9839.1.2.68.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 68, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, waterSupplyTemperature, 0 ]
     polling_period: 10000
 
   - name: water_flow # 1.3.6.1.4.1.9839.1.2.69.0
-    oid: [ SNMPv2-SMI, enterprises, 9839, 1, 2, 69, 0 ]
+    oid: [ CAREL-RACK-CONTROLLER, waterFlow, 0 ]
     polling_period: 10000
