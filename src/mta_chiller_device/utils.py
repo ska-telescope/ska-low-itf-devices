@@ -1,4 +1,4 @@
-"""This module contains util functions for transforming HTTP responses."""
+"""This module contains util functions for transforming HTTP responses and other functions."""
 
 import json
 from urllib.parse import unquote
@@ -7,6 +7,7 @@ import pydash as _
 
 from mta_chiller_device.custom_types import (
     Alarm,
+    AttributeDetails,
     ClientAttribute,
     ClientCommand,
     ClientDevice,
@@ -37,7 +38,7 @@ def transform_to_credentials(response) -> tuple[str, str]:
     return sses, plgid
 
 
-def transform_to_config(response) -> tuple[list[ControlGroup], list[ClientDevice]]:
+def transform_to_config(response) -> tuple[list[ControlGroup], dict[ClientDevice]]:
     """Extract the control groups and devices from the HTTP response."""
 
     # Locate the control groups
@@ -59,7 +60,7 @@ def transform_to_config(response) -> tuple[list[ControlGroup], list[ClientDevice
     )
 
     # Locate the devices
-    devices: list[ClientDevice] = (
+    devices: dict[ClientDevice] = (
         _.chain(response)
         .get("devices", {})
         .map_values(
@@ -126,7 +127,7 @@ def transform_to_attributes(device) -> list[ClientAttribute]:
 
 
 def transform_socket_message(
-    message: str, devices: list[ClientDevice]
+    message: str, devices: dict[ClientDevice]
 ) -> tuple[list[Datapoint], list[Alarm]]:
     """Transform a recieved socket message into attribute values and alarms."""
 
@@ -217,9 +218,7 @@ def transform_to_alarms(response: str, devices: list[ClientDevice]) -> list[Alar
                 }
             )
         )
-        .filter_(  # filter for active alarms
-            lambda alarm: int(alarm["end_time"]) == "null"
-        )
+        .filter_(lambda alarm: alarm["end_time"] == "null")  # filter for active alarms
         .map_(
             (
                 lambda value: {
@@ -237,3 +236,39 @@ def transform_to_alarms(response: str, devices: list[ClientDevice]) -> list[Alar
     )
 
     return alarms
+
+
+def generate_alarms_list(
+    alarms: list[Alarm],
+    from_socket: bool,
+    attr_details: AttributeDetails,
+    device_name,
+):
+    """Generate a list of changes to be applied to the cached alarm values for the specified device."""
+    alarms_to_report = {}
+
+    alarm_names = [
+        attr["name"]
+        for attr in attr_details.values()
+        if "is_alarm" in attr and attr["is_alarm"]
+    ]
+
+    # The response from polling the alarms endpoint includes all active alarms
+    # So, we clear all possible alarms first
+    if not from_socket:
+        for name in alarm_names:
+            alarms_to_report[name] = False
+
+    # Filter only the alarm codes that we are interested in for this device
+    dev_alarms = [
+        a
+        for a in alarms
+        if a["alarm_code"] in attr_details and a["device_name"] == device_name
+    ]
+
+    for alarm in dev_alarms:
+        alarm_code = alarm["alarm_code"]
+        attr_name = attr_details[alarm_code]["name"]
+        alarms_to_report[attr_name] = True
+
+    return alarms_to_report

@@ -1,7 +1,5 @@
 """This module contains the code that directly interfaces to the XWeb Evo online platform."""
 
-from datetime import datetime, timedelta
-
 import pydash as _
 import requests
 from websockets import ClientConnection
@@ -119,18 +117,13 @@ class XWebEvoClient:
 
         assert self._sses, "The client must be logged in first"
 
-        time_delta = timedelta(days=-7)
-        start_time = (datetime.now() + time_delta).strftime("%Y%m%d%H%M00")
-        end_time = datetime.now().strftime("%Y%m%d%H%M00")
-
         url = f"{self.base_url}/cgi-bin/xwalmlog.cgi"
         data = {
             "SSES": self._sses,
             "SRV": 1,
             "Q": (
-                '{"lvl":-1,"cat":-1,"typ":-1,"dev":-1,"usr":-1,"ntf":-1,"active":-1,'
-                + f'"st":{start_time},"et":{end_time}'
-                + "}"
+                '{"lvl":"-1","cat":"-1","typ":"-1","ntf":"-1","dev":"-1",'
+                + '"usr":"-1","et":"-1","st":"-1","active":1}'
             ),
         }
 
