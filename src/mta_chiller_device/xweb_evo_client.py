@@ -117,10 +117,6 @@ class XWebEvoClient:
 
         assert self._sses, "The client must be logged in first"
 
-        # time_delta = timedelta(days=-7)
-        # start_time = (datetime.now() + time_delta).strftime("%Y%m%d%H%M00")
-        # end_time = datetime.now().strftime("%Y%m%d%H%M00")
-
         url = f"{self.base_url}/cgi-bin/xwalmlog.cgi"
         data = {
             "SSES": self._sses,

@@ -175,8 +175,10 @@ def test_parse_sockets():
     assert (
         next(
             filter(
-                lambda x: x["device_name"] == "MTA Chiller 1"
-                and x["readable_attribute_name"] == "Chiller Set Point",
+                lambda x: (
+                    x["device_name"] == "MTA Chiller 1"
+                    and x["readable_attribute_name"] == "Chiller Set Point"
+                ),
                 datapoints,
             )
         )["value"]
@@ -236,9 +238,9 @@ def manual_test_powercycle():
     with DeviceTestContext(MTAChiller, properties=properties) as proxy:
         sleep(20)
 
-        assert (
-            proxy.chiller_state
-        ), "You must select the chiller that is currently on for this test"
+        assert proxy.chiller_state, (
+            "You must select the chiller that is currently on for this test"
+        )
 
         proxy.chiller_state = False
         sleep(10)
@@ -330,16 +332,3 @@ def manual_test_alarm():
         assert proxy.chiller_disconnected_alarm is True
 
     print("PASSED")
-
-
-if __name__ == "__main__":
-    # test_init()
-    # test_attributes()
-    # test_reconnect()
-    # test_parse_config()
-    # test_parse_sockets()
-    # test_generate_alarms_list()
-    # manual_test_alarm()
-    # IMPORTANT: Only uncomment below if you have access to the XWeb Evo online dashboard
-    # test_powercycle()
-    pass
