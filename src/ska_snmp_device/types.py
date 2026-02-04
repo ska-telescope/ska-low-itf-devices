@@ -31,11 +31,15 @@ class BitEnum(IntEnum):
 @dataclass(frozen=True)
 class SNMPAttrInfo(AttrInfo):
     identity: tuple[str | int, ...]
+    scaling_factor: int | float | None
 
 
 def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
     """Coerce a PySNMP value to a PyTango-compatible Python type."""
     if isinstance(value, Integer):
+        # Apply a scaling factor, if present
+        if attr.scaling_factor:
+            return int(int(value) * attr.scaling_factor)
         return int(value)
     if isinstance(value, Bits):
         return [

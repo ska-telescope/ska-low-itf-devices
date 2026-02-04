@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Generator
 
 import yaml
+from pyasn1.type.univ import Integer
 from pysnmp.smi.builder import MibBuilder
 from pysnmp.smi.compiler import addMibCompiler
 from tango import AttrWriteType
@@ -60,6 +61,7 @@ def _build_attr_info(mib_builder: MibBuilder, attr: dict[str, Any]) -> SNMPAttrI
     # be used as overrides to the generated tango.server.attribute() args.
     mib_name, symbol_name, *_ = oid = tuple(attr.pop("oid"))
     polling_period = attr.pop("polling_period", 0) / 1000
+    scaling_factor = attr.pop("scaling_factor", None)
 
     # get metadata about the SNMP object definition in the MIB
     (mib_info,) = mib_builder.importSymbols(mib_name, symbol_name)
@@ -75,10 +77,26 @@ def _build_attr_info(mib_builder: MibBuilder, attr: dict[str, Any]) -> SNMPAttrI
         **attr,  # allow user to override generated args
     }
 
+    # Validate the scaling factor, if present
+    if scaling_factor is not None:
+        if not isinstance(scaling_factor, (int, float)):
+            raise ValueError(
+                f'Attribute name "{attr["name"]}" contains a scaling_factor that is not an integer or float'
+            )
+        if not isinstance(mib_info.syntax, Integer):
+            raise ValueError(
+                f'Attribute name "{attr["name"]}" contains a scaling_factor but is not an Integer type'
+            )
+        if scaling_factor <= 0:
+            raise ValueError(
+                f'Attribute name "{attr["name"]}" contains a scaling_factor that is 0 or negative'
+            )
+
     return SNMPAttrInfo(
         polling_period=polling_period,
         attr_args=attr_args,
         identity=oid,
+        scaling_factor=scaling_factor,
     )
 
 

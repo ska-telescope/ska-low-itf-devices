@@ -34,6 +34,7 @@ def component_manager(endpoint):
                 ),
                 polling_period=0.5,
                 identity=("MIB", "tastic", 1),
+                scaling_factor=None,
             ),
             SNMPAttrInfo(
                 attr_args=dict(
@@ -42,6 +43,7 @@ def component_manager(endpoint):
                 ),
                 polling_period=1.0,
                 identity=("MIB", "tastic", 2),
+                scaling_factor=None,
             ),
         ],
         poll_rate=2.0,
