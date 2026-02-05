@@ -56,7 +56,7 @@ def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
         # This gives us the required 8 byte buffer for struct.unpack.
         # However, we can discard the first 4 bytes ('x') as they don't contain the float.
         data_bytes = b"\0" + value.asOctets()
-        return unpack(">xxxxf", data_bytes)[0]
+        return round(unpack(">xxxxf", data_bytes)[0], 2)
     return value
 
 
