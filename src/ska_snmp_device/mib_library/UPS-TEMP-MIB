@@ -25,7 +25,7 @@ layer8 OBJECT IDENTIFIER        ::= {layer7 1}
 layer9 OBJECT IDENTIFIER        ::= {layer8 2}
 values OBJECT IDENTIFIER        ::= {layer9 1}
 
-fan2Speed OBJECT-TYPE
+upsBatteryTemperature OBJECT-TYPE
     SYNTAX      Integer32
     MAX-ACCESS  read-only
     UNITS      "degrees Centigrade"
