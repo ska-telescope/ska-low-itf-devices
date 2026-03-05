@@ -1,0 +1,90 @@
+-- This is not a manufacturer provided MIB file. It was created
+-- to satisfy the needs of the SNMP Tango device for the Schroff
+-- rack controllers found in the low-ITF.
+
+SCHROFF-RACK-CONTROLLER DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, OBJECT-TYPE, NOTIFICATION-TYPE,
+    enterprises, Integer32, Opaque
+        FROM SNMPv2-SMI;
+
+schroff OBJECT IDENTIFIER ::= {enterprises 16394}
+
+rack OBJECT IDENTIFIER          ::= {schroff 200}
+controller OBJECT IDENTIFIER    ::= {rack 1}
+values OBJECT IDENTIFIER        ::= {controller 1}
+
+fan2Speed OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current speed of fan 2 in RPM."
+    ::= {values 1}
+
+fan1Speed OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current speed of fan 1 in RPM."
+    ::= {values 2}
+
+coldTopTemperature OBJECT-TYPE
+    SYNTAX      Opaque
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current reading from the cold-top temperature sensor."
+    ::= {values 205}
+
+coldBottomTemperature OBJECT-TYPE
+    SYNTAX      Opaque
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current reading from the cold-bottom temperature sensor."
+    ::= {values 206}
+
+warmTopTemperature OBJECT-TYPE
+    SYNTAX      Opaque
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current reading from the warm-top temperature sensor."
+    ::= {values 207}
+
+warmBottomTemperature OBJECT-TYPE
+    SYNTAX      Opaque
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current reading from the warm-bottom temperature sensor."
+    ::= {values 208}
+
+differentialPressure OBJECT-TYPE
+    SYNTAX      Opaque
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current reading from the differential pressure sensor."
+    ::= {values 209}
+
+waterReturnTemperature OBJECT-TYPE
+    SYNTAX      Opaque
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current water return temperature."
+    ::= {values 211}
+
+waterFlow OBJECT-TYPE
+    SYNTAX      Opaque
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "The current water flow in Litres/Minute."
+    ::= {values 212}
+
+END
