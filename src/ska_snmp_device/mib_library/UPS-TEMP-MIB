@@ -28,7 +28,6 @@ values OBJECT IDENTIFIER        ::= {layer9 1}
 upsBatteryTemperature OBJECT-TYPE
     SYNTAX      Integer32
     MAX-ACCESS  read-only
-    UNITS      "degrees Centigrade"
     STATUS      current
     DESCRIPTION
             "The ambient temperature at or near the UPS Battery
