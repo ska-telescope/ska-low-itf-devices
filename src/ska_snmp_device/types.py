@@ -9,13 +9,14 @@ from dataclasses import dataclass
 from enum import Enum, EnumMeta, IntEnum
 from functools import reduce
 from math import ceil
+from struct import unpack
 from typing import Any
 
 from pyasn1.type.base import Asn1Type
 from pyasn1.type.constraint import ValueRangeConstraint
 from pyasn1.type.namedval import NamedValues
 from pyasn1.type.univ import Integer
-from pysnmp.proto.rfc1902 import Bits, OctetString
+from pysnmp.proto.rfc1902 import Bits, OctetString, Opaque
 from tango import AttrDataFormat, DevULong64
 
 from ska_low_itf_devices.attribute_polling_component_manager import AttrInfo
@@ -49,6 +50,13 @@ def snmp_to_python(attr: SNMPAttrInfo, value: Asn1Type) -> Any:
         ]
     if isinstance(value, OctetString):
         return str(value)
+    if isinstance(value, Opaque):
+        # ASN_OPAQUE_FLOAT:
+        # Take the byte representation of the Opaque type and pad with one byte.
+        # This gives us the required 8 byte buffer for struct.unpack.
+        # However, we can discard the first 4 bytes ('x') as they don't contain the float.
+        data_bytes = b"\0" + value.asOctets()
+        return round(unpack(">xxxxf", data_bytes)[0], 2)
     return value
 
 
@@ -94,39 +102,51 @@ def attr_args_from_snmp_type(snmp_type: Asn1Type) -> dict[str, Any]:
         attr_args.update(
             dtype=str,
         )
+    elif isinstance(snmp_type, Opaque):
+        attr_args.update(
+            dtype=float,
+        )
     elif isinstance(snmp_type, Integer):
-        # Specific case where an integer field has an enum constraint.
-        # I'm assuming here that if there are namedValues, there are no
-        # other valid-but-unnamed values - true for the MIBs I've seen.
-        if snmp_type.namedValues:
-            try:
-                attr_args.update(
-                    dtype=_enum_from_named_values(snmp_type.namedValues),
-                )
-            except ValueError:
-                pass
-        else:
+        return _attr_args_from_integer_type(snmp_type)
+
+    return attr_args
+
+
+def _attr_args_from_integer_type(snmp_type: Asn1Type) -> dict[str, Any]:
+    attr_args: dict[str, Any] = {}
+
+    # Specific case where an integer field has an enum constraint.
+    # I'm assuming here that if there are namedValues, there are no
+    # other valid-but-unnamed values - true for the MIBs I've seen.
+    if snmp_type.namedValues:
+        try:
             attr_args.update(
-                dtype=int,
-                abs_change=1,
+                dtype=_enum_from_named_values(snmp_type.namedValues),
             )
-            # In PySNMP, all integers' subtypeSpec should be a ConstraintsIntersection.
-            # Different flavours of integer then add a ValueRangeConstraint, and SNMP
-            # objects can then apply their own range constraints. If we calculate the
-            # intersection of these ranges, we can pass min and max values to Tango.
-            if all(isinstance(x, ValueRangeConstraint) for x in snmp_type.subtypeSpec):
-                ranges = ((r.start, r.stop) for r in snmp_type.subtypeSpec)
-                start, stop = reduce(_range_intersection, ranges)
-                attr_args.update(
-                    min_value=start,
-                    max_value=stop,
-                )
-                # Stop-gap to support Counter64. Perhaps we should always
-                # specify the smallest compatible Tango int type?
-                if stop >= 2**63:
-                    attr_args["dtype"] = DevULong64
-                    if stop == 2**64 - 1:
-                        del attr_args["max_value"]
+        except ValueError:
+            pass
+    else:
+        attr_args.update(
+            dtype=int,
+            abs_change=1,
+        )
+        # In PySNMP, all integers' subtypeSpec should be a ConstraintsIntersection.
+        # Different flavours of integer then add a ValueRangeConstraint, and SNMP
+        # objects can then apply their own range constraints. If we calculate the
+        # intersection of these ranges, we can pass min and max values to Tango.
+        if all(isinstance(x, ValueRangeConstraint) for x in snmp_type.subtypeSpec):
+            ranges = ((r.start, r.stop) for r in snmp_type.subtypeSpec)
+            start, stop = reduce(_range_intersection, ranges)
+            attr_args.update(
+                min_value=start,
+                max_value=stop,
+            )
+            # Stop-gap to support Counter64. Perhaps we should always
+            # specify the smallest compatible Tango int type?
+            if stop >= 2**63:
+                attr_args["dtype"] = DevULong64
+                if stop == 2**64 - 1:
+                    del attr_args["max_value"]
 
     return attr_args
 
