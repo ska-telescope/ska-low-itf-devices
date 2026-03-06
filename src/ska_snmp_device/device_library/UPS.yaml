@@ -23,9 +23,9 @@ attributes:
   #  oid: [UPS-MIB, upsBatteryCurrent, 0]
   #  polling_period: 10000
 
-  #- name: batteryTemperature
-  #  oid: [UPS-MIB, upsBatteryTemperature, 0]
-  #  polling_period: 10000
+  - name: batteryTemperature
+    oid: [UPS-TEMP-MIB, values, 5853]
+    polling_period: 10000
 
   - name: inputFrequency
     oid: [UPS-MIB, upsInputFrequency, 1]

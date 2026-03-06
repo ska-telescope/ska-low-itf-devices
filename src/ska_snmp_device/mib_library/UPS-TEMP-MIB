@@ -1,0 +1,46 @@
+-- This is not a manufacturer provided MIB file. It was created
+-- to add the battery temperature object for the UPS found in 
+-- the low-ITF.
+
+-- enterprises.476.1.42.3.9.20.1.10.1.2.2.5853 = "Battery Temperature" 
+-- enterprises.476.1.42.3.9.20.1.20.1.2.1.5853 = "25"
+
+UPS-TEMP-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, OBJECT-TYPE, NOTIFICATION-TYPE,
+    enterprises, Integer32
+        FROM SNMPv2-SMI;
+
+vertiv OBJECT IDENTIFIER ::= {enterprises 476}
+
+layer1 OBJECT IDENTIFIER        ::= {vertiv 1}
+layer2 OBJECT IDENTIFIER        ::= {layer1 42}
+layer3 OBJECT IDENTIFIER        ::= {layer2 3}
+layer4 OBJECT IDENTIFIER        ::= {layer3 9}
+layer5 OBJECT IDENTIFIER        ::= {layer4 20}
+layer6 OBJECT IDENTIFIER        ::= {layer5 1}
+layer7 OBJECT IDENTIFIER        ::= {layer6 20}
+layer8 OBJECT IDENTIFIER        ::= {layer7 1}
+layer9 OBJECT IDENTIFIER        ::= {layer8 2}
+
+values OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+            "Values read from the UPS."
+    ::= {layer9 1}
+
+-- values OBJECT IDENTIFIER        ::= {layer9 1}
+
+-- upsBatteryTemperature OBJECT-TYPE
+--    SYNTAX      Integer32
+--    MAX-ACCESS  read-only
+--    STATUS      current
+--    DESCRIPTION
+--            "The ambient temperature at or near the UPS Battery
+--            casing."
+--    ::= {values 5853}
+
+END
