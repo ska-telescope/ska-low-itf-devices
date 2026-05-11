@@ -4,7 +4,7 @@
 --==================================================================
 --SiebenSense		    Sep 7, 2019  Rev. H
 
-SERVERS-CHECK-MIB DEFINITIONS ::= BEGIN
+SERVERS-CHECK DEFINITIONS ::= BEGIN
     IMPORTS
     enterprises, IpAddress
         FROM RFC1155-SMI
