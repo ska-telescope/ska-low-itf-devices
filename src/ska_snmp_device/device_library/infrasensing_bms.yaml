@@ -1,0 +1,31 @@
+# Common OID prefix: 1.3.6.1.4.1.16394.200.1.1.xx
+
+attributes:
+  - name: bms_enclosure_temperature   # 1.3.6.1.4.1.17095.3.2.0
+    oid: [ SERVERS-CHECK, sensor1Value, 0 ]
+    polling_period: 10000
+
+  - name: int_ping                    # 1.3.6.1.4.1.17095.3.6.0
+    oid: [ SERVERS-CHECK, sensor2Value, 0 ]
+    polling_period: 10000
+
+  - name: ups_h2                      # 1.3.6.1.4.1.17095.11.13.2.0
+    oid: [ SERVERS-CHECK, sensor13value, 0 ]
+    polling_period: 10000
+
+  - name: leak_detection              # 1.3.6.1.4.1.17095.11.16.2.0
+    oid: [ SERVERS-CHECK, sensor16value, 0 ]
+    polling_period: 10000
+
+  - name: ups_rack_temperature        # 1.3.6.1.4.1.17095.11.19.2.0
+    oid: [ SERVERS-CHECK, sensor19value, 0 ]
+    polling_period: 10000
+
+  - name: ups_rack_humidity           # 1.3.6.1.4.1.17095.11.20.2.0
+    oid: [ SERVERS-CHECK, sensor20value, 0 ]
+    polling_period: 10000
+
+  - name: ups_rack_dew_point          # 1.3.6.1.4.1.17095.11.21.2.0
+    oid: [ SERVERS-CHECK, sensor21value, 0 ]
+    polling_period: 10000
+
